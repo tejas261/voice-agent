@@ -1,0 +1,162 @@
+[
+  [
+    "What is the name of this insurance product?",
+    "product_name"
+  ],
+  [
+    "Tell me the broad purpose and main benefits of the plan",
+    "policy_overview"
+  ],
+  [
+    "Is this plan linked to the stock market?",
+    "plan_type"
+  ],
+  [
+    "How much life cover is the minimum?",
+    "sum_assured_limits"
+  ],
+  [
+    "Is 70 too old to join this insurance?",
+    "age_at_entry"
+  ],
+  [
+    "Is a 12 year age gap allowed for spouse cover?",
+    "spouse_cover_summary"
+  ],
+  [
+    "Can my wife be added after I purchase the policy?",
+    "spouse_cover_summary"
+  ],
+  [
+    "How much time do I get to pay an overdue quarterly instalment?",
+    "grace_period_rules"
+  ],
+  [
+    "What is deducted if a claim is made during the grace period?",
+    "grace_period_rules"
+  ],
+  [
+    "Will my family get a lump sum when I die?",
+    "death_benefit_summary"
+  ],
+  [
+    "Is premium returned when I survive and did not buy ROP?",
+    "maturity_benefit"
+  ],
+  [
+    "Can I get a premium holiday after five years?",
+    "premium_break_standard"
+  ],
+  [
+    "Will the cover stop after a partial terminal illness payout?",
+    "terminal_illness_termination"
+  ],
+  [
+    "How many doctors must certify my terminal condition?",
+    "terminal_illness_criteria"
+  ],
+  [
+    "Are there any reductions for salaried employees?",
+    "salaried_individual_discount"
+  ],
+  [
+    "What happens to spouse cover if both people die together?",
+    "spouse_cover_exclusions"
+  ],
+  [
+    "पॉलिसी का पूरा नाम क्या है?",
+    "product_name"
+  ],
+  [
+    "इस योजना में लोन ले सकते हैं?",
+    "policy_loan_restriction"
+  ],
+  [
+    "बीमा लेने के लिए न्यूनतम उम्र क्या है?",
+    "age_at_entry"
+  ],
+  [
+    "प्रीमियम देना बंद कर दूं तो क्या होगा?",
+    "paid_up_qualification"
+  ],
+  [
+    "What is my remaining premium balance?",
+    null
+  ],
+  [
+    "Has my policy lapsed already?",
+    null
+  ],
+  [
+    "Did I select return of premium when I bought my plan?",
+    null
+  ],
+  [
+    "What exact sum assured did I choose?",
+    null
+  ],
+  [
+    "What is my customer ID?",
+    null
+  ],
+  [
+    "Who is the nominee on my policy?",
+    null
+  ],
+  [
+    "How much does a 50 lakh policy cost each month?",
+    null
+  ],
+  [
+    "Is my car insured against theft?",
+    null
+  ],
+  [
+    "Does my health plan pay for dental surgery?",
+    null
+  ],
+  [
+    "What is the policy number on my personal account?",
+    null
+  ],
+  [
+    "What is the refund time for a cancelled flight?",
+    null
+  ],
+  [
+    "Can I check my application approval status?",
+    null
+  ],
+  [
+    "Tell me the name of my employer",
+    null
+  ],
+  [
+    "What is the return on my mutual fund investment?",
+    null
+  ],
+  [
+    "मेरी पॉलिसी का नंबर बताइए",
+    null
+  ],
+  [
+    "मेरा क्लेम मंजूर हुआ या नहीं?",
+    null
+  ],
+  [
+    "मेरे बैंक खाते का बैलेंस कितना है?",
+    null
+  ],
+  [
+    "Can you change my phone number?",
+    null
+  ],
+  [
+    "Which documents are required for a death claim?",
+    null
+  ],
+  [
+    "Can I pay the premium by cryptocurrency?",
+    null
+  ]
+]

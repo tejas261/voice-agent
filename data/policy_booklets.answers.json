@@ -1,0 +1,442 @@
+{
+  "product_name": {
+    "questions": [
+      "Which insurance plan is this?",
+      "What is the name of this policy?",
+      "What is the full name of the insurance plan?",
+      "Name of the plan",
+      "What is this insurance plan called?",
+      "What is the UIN of this product?",
+      "यह कौन सा बीमा प्लान है?",
+      "इस पॉलिसी का नाम क्या है?",
+      "इस बीमा योजना को क्या कहते हैं?",
+      "policy ka naam kya hai",
+      "Who is the insurer?",
+      "Which insurer issues this policy?",
+      "बीमा कंपनी कौन सी है?",
+      "What is the insurance company name?"
+    ],
+    "answer_hi": "यह एचडीएफसी लाइफ क्लिक टू प्रोटेक्ट एलीट प्रो प्लान है। इसका यूआईएन 101N193V01 है।",
+    "source_sha256": "4645d5a47b5101c8733615b7b81d6c34f1626c1e0b0e3a5bff2df98a5050e2a7",
+    "voice_answer_en": "This plan is called HDFC Life Click 2 Protect Elite Pro. Its UIN is 101N193V01."
+  },
+  "plan_type": {
+    "questions": [
+      "What type of insurance is this?",
+      "यह किस प्रकार का बीमा है?",
+      "Is this a life insurance plan or an investment-linked product?",
+      "Is this plan participating or non-participating?"
+    ],
+    "answer_hi": "यह नॉन लिंक्ड, नॉन पार्टिसिपेटिंग, व्यक्तिगत जीवन बीमा प्लान है, जिसमें शुद्ध जोखिम प्रीमियम या बचत जीवन बीमा का विकल्प है।",
+    "source_sha256": "65edfc512777108cc5d5d22db234a789679a41cde68be28ef2494e46f94fa0ee",
+    "voice_answer_en": "It's an individual life insurance plan. It's non-linked and non-participating, with pure risk premium or savings options."
+  },
+  "age_at_entry": {
+    "questions": [
+      "At what age can I buy this policy?",
+      "Minimum maximum entry age eligibility",
+      "बीमा लेने की उम्र कितनी है?",
+      "What are the youngest and oldest ages for joining this plan?",
+      "Is age measured on the last birthday?"
+    ],
+    "answer_hi": "प्रवेश की न्यूनतम उम्र 18 वर्ष और अधिकतम उम्र 65 वर्ष है। उम्र पिछले जन्मदिन के आधार पर गिनी जाती है।",
+    "source_sha256": "0f32c074ad277d7396f09fa97d0cbed47d0a12bea0a5f00e21bf8ff9eb7c778e",
+    "voice_answer_en": "You can join between ages 18 and 65. The plan uses your age at your last birthday."
+  },
+  "maturity_age": {
+    "questions": [
+      "What is the maximum age at maturity?",
+      "पॉलिसी किस उम्र में समाप्त होती है?",
+      "At what minimum and maximum age can the plan mature?"
+    ],
+    "answer_hi": "परिपक्वता की न्यूनतम उम्र 28 वर्ष और अधिकतम उम्र 85 वर्ष है।",
+    "source_sha256": "4296977d794258d881a171dda3aeed35029e82f92aa8fd6ddede9915524aeea3",
+    "voice_answer_en": "The plan must end when you're between 28 and 85 years old."
+  },
+  "policy_term_limits": {
+    "questions": [
+      "How long can my policy last?",
+      "Minimum maximum policy duration",
+      "पॉलिसी की अवधि कितनी है?",
+      "How many years of insurance coverage can I have?",
+      "How long will I remain insured?",
+      "What are the minimum terms for regular pay and limited pay?"
+    ],
+    "answer_hi": "अधिकतम पॉलिसी अवधि 85 में से प्रवेश की उम्र घटाकर तय होती है। न्यूनतम अवधि 5 पे और रेगुलर पे में 10 वर्ष, 10 पे में 15 वर्ष और 15 पे में 20 वर्ष है।",
+    "source_sha256": "b1208efcb97e715eb93216efd328d40f8db160915a453eb145e9f425b71a22fd",
+    "voice_answer_en": "The maximum policy term is 85 minus your age when you join. The minimum is 10 years for 5-Pay or Regular Pay, 15 years for 10-Pay, and 20 years for 15-Pay."
+  },
+  "sum_assured_limits": {
+    "questions": [
+      "What is the minimum maximum insurance cover?",
+      "How much sum assured can I choose?",
+      "न्यूनतम बीमा राशि कितनी है?",
+      "What is the smallest amount of life cover available?",
+      "Is there a maximum sum assured I can buy?"
+    ],
+    "answer_hi": "न्यूनतम बेसिक सम एश्योर्ड 50 लाख रुपये है। अधिकतम सीमा तय नहीं है, लेकिन राशि कंपनी की स्वीकृत अंडरराइटिंग नीति के अधीन है।",
+    "source_sha256": "cf62f53206bb4029f1189d31595560dbb0f90e53e0badac0217b2632287a2cb3",
+    "voice_answer_en": "The minimum basic cover is 50 lakh rupees. There's no maximum limit, but the amount is subject to the insurer's underwriting policy."
+  },
+  "death_benefit_summary": {
+    "questions": [
+      "What happens if the insured dies?",
+      "Who receives the death benefit?",
+      "मृत्यु होने पर पैसा किसे मिलेगा?",
+      "Who gets the payout when I die?",
+      "Will my nominee receive a lump sum or instalments?"
+    ],
+    "answer_hi": "बीमित व्यक्ति की पॉलिसी अवधि के दौरान मृत्यु होने पर मृत्यु लाभ नामित व्यक्ति को एकमुश्त दिया जाता है।",
+    "source_sha256": "0fcd3ae8096a50429f86e3e874775e78938d718639233d0280b4c3124b8b74bb",
+    "voice_answer_en": "If the person covered passes away during the policy term, the nominee receives a lump-sum payment."
+  },
+  "death_benefit_formula": {
+    "questions": [
+      "How is the death benefit calculated?",
+      "मृत्यु लाभ की गणना कैसे होती है?",
+      "How much money is payable when the insured person dies?"
+    ],
+    "answer_hi": "देय मृत्यु लाभ, सम एश्योर्ड ऑन डेथ और मृत्यु की तारीख तक चुकाए गए कुल प्रीमियम के 105 प्रतिशत में से अधिक राशि होता है।",
+    "source_sha256": "c31d9c86057c1f1ae3b7bb3adea75202e6efa3d499f22c6431ece3bfa9dd0415",
+    "voice_answer_en": "The death benefit is whichever is higher: the sum assured on death, or 105 percent of the total premiums paid up to the date of death."
+  },
+  "sum_assured_on_death": {
+    "questions": [
+      "What does sum assured on death mean?",
+      "मृत्यु पर सम एश्योर्ड क्या है?",
+      "Which amounts are compared to calculate sum assured on death?"
+    ],
+    "answer_hi": "सम एश्योर्ड ऑन डेथ, वार्षिक प्रीमियम के 10 गुना, बेसिक सम एश्योर्ड और सम एश्योर्ड ऑन मैच्योरिटी में से सबसे अधिक राशि है।",
+    "source_sha256": "b45c05ce3df8ab5651c071b5376ff5020f292d2fbd8107b691c85325864b3948",
+    "voice_answer_en": "The sum assured on death is the highest of three amounts: ten times the annualized premium, the basic sum assured, or the sum assured on maturity."
+  },
+  "maturity_benefit": {
+    "questions": [
+      "Do I get my premiums back when the policy term ends?",
+      "What happens to accumulated premium after maturity?",
+      "Will the money I paid be returned once my life cover expires?",
+      "Is there a payout on surviving until the end of the plan?",
+      "What if I did not choose return of premium ROP?",
+      "पॉलिसी की अवधि खत्म होने पर मेरे प्रीमियम वापस मिलेंगे?",
+      "जमा किया हुआ पैसा मैच्योरिटी पर वापस मिलेगा?",
+      "बीमा की अवधि पूरी होने पर क्या मिलता है?",
+      "policy khatam hone par premium wapas milega",
+      "Will I get a refund of my premium if I don't claim it during the insurance period?",
+      "If I never make a claim, do I get my insurance premiums back?",
+      "Is my money refunded if I survive the entire policy without a claim?",
+      "What happens to unused premiums when the insurance expires?",
+      "Do I receive any money if there are no claims throughout the term?",
+      "Will my premium be returned if I do not use the insurance cover?",
+      "अगर बीमा अवधि में कोई क्लेम नहीं किया तो क्या प्रीमियम वापस मिलेगा?",
+      "बिना दावा किए पॉलिसी पूरी होने पर पैसे वापस मिलेंगे?",
+      "claim nahi kiya to premium wapas milega",
+      "Is the maturity payout different with and without the ROP option?"
+    ],
+    "answer_hi": "पॉलिसी अवधि के अंत तक जीवित रहने पर, चुकाए गए कुल प्रीमियम का 100 प्रतिशत तभी वापस मिलता है, जब पॉलिसी लेते समय रिटर्न ऑफ प्रीमियम यानी आरओपी विकल्प चुना गया हो। अगर आरओपी नहीं चुना था, तो परिपक्वता लाभ शून्य है।",
+    "source_sha256": "d4c8c8c8914090ede999cbddd72d329457dba30c904f571db8023a2de10d741a",
+    "voice_answer_en": "If you survive to the end of the policy term and chose the Return of Premium option when you bought the policy, you'll get 100 percent of the total premiums paid back. If you didn't choose that option, there's no maturity payout."
+  },
+  "smart_exit_benefit": {
+    "questions": [
+      "Can I use the smart exit option?",
+      "Can I exit after 25 policy years?",
+      "Is smart exit available with ROP?",
+      "स्मार्ट एग्जिट कब ले सकते हैं?",
+      "What are the eligible years for taking smart exit?",
+      "Can someone with ROP choose smart exit?"
+    ],
+    "answer_hi": "स्मार्ट एग्जिट से चुकाए गए कुल प्रीमियम का 100 प्रतिशत मिल सकता है। इसे 25वें वर्ष के बाद लिया जा सकता है, लेकिन आखिरी 5 पॉलिसी वर्षों में नहीं। आरओपी विकल्प चुनने पर यह उपलब्ध नहीं है।",
+    "source_sha256": "837bba75720a91cd49978ada24c5d4b868701c9f046b665b5f5013a459e06529",
+    "voice_answer_en": "With Smart Exit, you can cancel an active policy and receive 100 percent of the total premiums paid. You can use it after policy year 25, but not during the final five policy years, and it's unavailable if you chose Return of Premium."
+  },
+  "premium_break_standard": {
+    "questions": [
+      "Can I pause premium payments?",
+      "How do I take a premium break?",
+      "प्रीमियम भुगतान कुछ समय रोक सकते हैं?",
+      "Can I take a premium holiday after five years?",
+      "Will my coverage remain active during a premium break?",
+      "How early must I request a premium break?",
+      "Are deferred premiums deducted from claims during the break?"
+    ],
+    "answer_hi": "सभी प्रीमियम चुकाकर 5 पॉलिसी वर्ष पूरे करने के बाद, लिखित अनुरोध पर 12 महीने तक प्रीमियम रोक सकते हैं। अनुरोध 30 दिन पहले, या मासिक भुगतान में 15 दिन पहले करना होता है। कवर जारी रहता है, लेकिन इस दौरान दावे से स्थगित प्रीमियम काटा जाता है।",
+    "source_sha256": "bd7251c9e254ec32dec915337d5cd23e189dbe4f96c7cdc51be0c88747a35256",
+    "voice_answer_en": "You can request a premium break of up to 12 months after completing five policy years with all premiums paid. Send a written request 30 days ahead, or 15 days ahead if you pay monthly. Your cover stays active, but deferred premiums are deducted from any claim payment during the break."
+  },
+  "premium_break_special": {
+    "questions": [
+      "Is there a pregnancy premium break?",
+      "Special premium break for female lives",
+      "गर्भावस्था में प्रीमियम ब्रेक मिल सकता है?",
+      "Can women take a payment break for pregnancy or bereavement?",
+      "How long must I wait between special premium breaks?"
+    ],
+    "answer_hi": "महिला बीमित व्यक्ति 2 पॉलिसी वर्ष पूरे होने के बाद गर्भावस्था के दौरान, प्रसव के 6 महीनों के भीतर, या पति की मृत्यु के 6 महीनों के भीतर 12 महीने का प्रीमियम ब्रेक ले सकती हैं। अनुरोधों के बीच कम से कम 2 पॉलिसी वर्षों का अंतर होना चाहिए।",
+    "source_sha256": "65e1c226988e919e25964ae21b9a0cad9299036a0aea9aa71b7abce5d9f86082",
+    "voice_answer_en": "For a woman covered under the policy, a 12-month premium break is available after two policy years during pregnancy, within six months of labor, or within six months of her spouse's death. There must be at least two policy years between requests."
+  },
+  "spouse_cover_summary": {
+    "questions": [
+      "Can my spouse also be covered?",
+      "How does spouse cover work?",
+      "जीवनसाथी का बीमा कैसे होता है?",
+      "Can I include my wife or husband in the insurance cover?",
+      "What is the allowed age gap between husband and wife?",
+      "Must spouse cover be selected when the policy starts?",
+      "What percentage of cover does my spouse receive?"
+    ],
+    "answer_hi": "स्पाउस कवर शादीशुदा दंपति के लिए शुरुआत में चुना जाता है और उम्र का अंतर अधिकतम 10 वर्ष होना चाहिए। मुख्य बीमित की मृत्यु पर मृत्यु लाभ मिलता है और आगे के प्रीमियम माफ होते हैं। जीवनसाथी को बाकी अवधि के लिए बेसिक सम एश्योर्ड के चुने हुए प्रतिशत, अधिकतम 50 प्रतिशत, का कवर मिलता है।",
+    "source_sha256": "8d3d8ba36782c8e2e891ab5e4576aefe9dee4368518a34f50603497f4912f25e",
+    "voice_answer_en": "Married couples with an age gap of no more than 10 years can choose spouse cover when buying the policy. If the primary person covered dies, the death benefit is paid as a lump sum and future premiums are waived. The spouse's death cover then continues for the remaining term at the chosen percentage of the basic sum assured, up to 50 percent."
+  },
+  "spouse_cover_exclusions": {
+    "questions": [
+      "When is spouse cover excluded?",
+      "What if both spouses die in the same event?",
+      "जीवनसाथी के कवर में क्या अपवाद हैं?",
+      "Does spouse cover end if both of us die together?",
+      "What happens to spouse cover if my spouse is already 75?"
+    ],
+    "answer_hi": "दोनों की एक साथ या एक ही घटना में मृत्यु होने पर स्पाउस कवर नहीं मिलता। मुख्य बीमित की मृत्यु के समय जीवनसाथी की उम्र 75 वर्ष या अधिक हो, या जोखिम शुरू होने अथवा मुख्य बीमित की मृत्यु के 12 महीनों के भीतर आत्महत्या हो, तो भी यह कवर समाप्त हो जाता है।",
+    "source_sha256": "6805e2e2e62e69910724a73f40139256a0bc336baa9870b5479175f67459b045",
+    "voice_answer_en": "Spouse cover ends without a payout if both insured people die at the same time or from the same event, or if the spouse is 75 or older when the primary person covered dies. It also doesn't pay for suicide within 12 months of the risk starting or the primary person's death."
+  },
+  "education_income_summary": {
+    "questions": [
+      "What is the education income benefit for my child?",
+      "बच्चों की पढ़ाई के लिए क्या लाभ है?",
+      "What annual education payments can my child get?",
+      "Until which age will the child receive education income?",
+      "What ages are eligible for the child education benefit?"
+    ],
+    "answer_hi": "अतिरिक्त प्रीमियम पर यह लाभ प्रवेश के समय 0 से 20 वर्ष के बच्चों के लिए है; मुख्य बीमित की प्रवेश उम्र बच्चे की उम्र से कम से कम 20 वर्ष अधिक होनी चाहिए। मुख्य बीमित की मृत्यु पर सम एश्योर्ड के 10 प्रतिशत, अधिकतम 10 लाख रुपये, की कुल राशि समान वार्षिक किस्तों में मिलती है। भुगतान बच्चे के 25 वर्ष का होने या पॉलिसी अवधि खत्म होने तक, जो पहले हो, चलता है।",
+    "source_sha256": "bdfc170093f370b3eeca198ee04ca8bb975086eb7e1137d05485837e72d4b4c3",
+    "voice_answer_en": "This optional benefit costs an additional premium and is available for children aged up to 20 when joining; the primary person covered must be at least 20 years older than the child. If that person dies, equal yearly payments totaling 10 percent of the sum assured, up to 10 lakh rupees, are paid until the child turns 25 or the policy term ends, whichever comes first."
+  },
+  "immediate_payout_rules": {
+    "questions": [
+      "Is there an immediate payment after a death claim?",
+      "How quickly is the interim death claim paid?",
+      "मृत्यु के दावे पर तुरंत कितना मिलता है?",
+      "What amount is paid immediately after death is reported?",
+      "Is there a waiting period for the interim death benefit?"
+    ],
+    "answer_hi": "एक वर्ष की प्रतीक्षा अवधि पूरी कर चुकी सक्रिय पॉलिसी में मृत्यु की सूचना दर्ज होने के 1 कार्य दिवस के भीतर 5 लाख रुपये का अग्रिम अंतरिम मृत्यु लाभ मिलता है। शेष राशि दावे की विस्तृत जाँच पूरी होने के बाद दी जाती है।",
+    "source_sha256": "4b9792ffb3bd7b7104260582ee2f6c2c00cca3d281f6589caf8935228923de62",
+    "voice_answer_en": "For an active policy that has completed the one-year waiting period, an interim death benefit of 5 lakh rupees is paid within one working day of registering the death claim notification. The remaining cover amount is paid after the full claim investigation."
+  },
+  "grace_period_rules": {
+    "questions": [
+      "How much grace period do I get for a late premium?",
+      "What if I miss my monthly premium due date?",
+      "प्रीमियम देर से भरने पर कितने दिन मिलते हैं?",
+      "मासिक प्रीमियम की ग्रेस अवधि कितनी है?",
+      "How late can I pay a monthly premium?",
+      "What is the grace time for annual premium payments?",
+      "Does insurance cover stay active during the grace period?",
+      "Are unpaid premiums deducted from claims during the grace period?"
+    ],
+    "answer_hi": "वार्षिक, छमाही और तिमाही प्रीमियम के लिए 30 दिनों की ग्रेस अवधि है। मासिक प्रीमियम के लिए 15 दिन मिलते हैं। इस अवधि में वैध दावे स्वीकार होते हैं, लेकिन बकाया प्रीमियम काटा जाता है।",
+    "source_sha256": "3007fdb99386bc4054e455ce2efcfd81474fefeef5c251df14ba01efe1bf3568",
+    "voice_answer_en": "You have 15 days to pay a monthly premium, or 30 days if you pay yearly, half-yearly, or quarterly. Valid claims during this grace period are paid, with the unpaid premium deducted."
+  },
+  "modal_conversion_factors": {
+    "questions": [
+      "How are monthly quarterly half yearly premiums calculated?",
+      "भुगतान आवृत्ति का गुणक क्या है?",
+      "What multiplier converts annual premiums to monthly payments?"
+    ],
+    "answer_hi": "छमाही भुगतान में वार्षिक प्रीमियम को 0.5100, तिमाही में 0.2600 और मासिक में 0.0875 से गुणा किया जाता है।",
+    "source_sha256": "a64b2c97bbf7e0a6311eb4a6eaf57ea7eb36f91f509d00553ebc3376caa27869",
+    "voice_answer_en": "To calculate non-annual payments, multiply the annual premium by 0.5100 for half-yearly, 0.2600 for quarterly, or 0.0875 for monthly payments."
+  },
+  "high_sum_assured_discount": {
+    "questions": [
+      "Are there discounts for high insurance cover?",
+      "दो करोड़ के कवर पर क्या छूट है?",
+      "How much discount is available for cover of two crores or more?",
+      "What lifetime discount replaces the high sum assured first year discount?"
+    ],
+    "answer_hi": "2 करोड़ रुपये या अधिक के बेसिक सम एश्योर्ड पर पहले वर्ष में लिमिटेड पे के लिए 10 प्रतिशत और रेगुलर पे के लिए 7 प्रतिशत छूट है। इसके बदले जीवनभर की छूट चुन सकते हैं: 5 पे में 1.75 प्रतिशत, 10 पे या 15 पे में 1 प्रतिशत, और रेगुलर पे में 0.75 प्रतिशत।",
+    "source_sha256": "687b5d3a0d986743f8295fd1fc1fbd1d3d3b886b880ff7607de76325df877eb8",
+    "voice_answer_en": "For basic cover of at least 2 crore rupees, the first-year discount is 10 percent for Limited Pay or 7 percent for Regular Pay. Alternatively, you can choose a lifetime discount: 1.75 percent for 5-Pay, 1 percent for 10-Pay or 15-Pay, or 0.75 percent for Regular Pay."
+  },
+  "salaried_individual_discount": {
+    "questions": [
+      "Is there a discount for salaried customers?",
+      "वेतनभोगी ग्राहकों को क्या छूट है?",
+      "What first year and lifetime discounts can salaried buyers choose?"
+    ],
+    "answer_hi": "वेतनभोगी खरीदारों को पहले वर्ष में 7 प्रतिशत प्रीमियम छूट मिलती है। इसके बदले जीवनभर की छूट चुन सकते हैं: 5 पे में 1.25 प्रतिशत, और 10 पे, 15 पे या रेगुलर पे में 0.75 प्रतिशत।",
+    "source_sha256": "f6a0faa770c8b4fde86a8ecd60ecb882496245964e75cc38e1d5a8c681e3ac23",
+    "voice_answer_en": "Salaried buyers get a 7 percent discount on the first year's premium. Alternatively, they can choose a lifetime discount of 1.25 percent for 5-Pay, or 0.75 percent for 10-Pay, 15-Pay, or Regular Pay."
+  },
+  "paid_up_qualification": {
+    "questions": [
+      "What happens if I stop paying premiums?",
+      "When does the policy lapse or become paid up?",
+      "प्रीमियम बंद करने पर पॉलिसी का क्या होता है?",
+      "If I can't continue premium payments, what happens to my cover?",
+      "What if I cannot afford to pay premiums any longer?",
+      "Does ROP become paid up after one year of premium payments?"
+    ],
+    "answer_hi": "आरओपी विकल्प होने और कम से कम एक पूरे वर्ष का प्रीमियम चुकाने पर ही पॉलिसी को कम किया हुआ पेड अप मूल्य मिलता है। बाकी विकल्पों में प्रीमियम न भरने पर पॉलिसी बिना किसी मूल्य के पूरी तरह समाप्त हो जाती है।",
+    "source_sha256": "2f9c503c5b704ec88dace90364ed6d6bdd4065c28bda94c51fed6ef76a34cd23",
+    "context_ids": [
+      "grace_period_rules",
+      "paid_up_qualification"
+    ],
+    "voice_answer_en": "If you chose Return of Premium and paid at least one full year of premiums, the policy can have a reduced paid-up value. Under the other plan options, the policy lapses with zero value when premiums aren't paid."
+  },
+  "surrender_value_rop": {
+    "questions": [
+      "When does my policy acquire a surrender value?",
+      "Can I surrender my return of premium policy?",
+      "सरेंडर वैल्यू कब मिलती है?",
+      "How soon does single pay get a surrender value?",
+      "What is the discount rate used for special surrender value?"
+    ],
+    "answer_hi": "आरओपी विकल्प में 2 वर्ष का प्रीमियम चुकाने के बाद गारंटीड सरेंडर वैल्यू मिलती है; सिंगल पे में यह तुरंत मिलती है। दस्तावेज़ के अनुसार स्पेशल सरेंडर वैल्यू की गणना में वर्तमान छूट दर 7.75 प्रतिशत वार्षिक है।",
+    "source_sha256": "7b428abe1f88129ae391d3fa3d424297d0d8622188fe4750b2517baac0cf619a",
+    "voice_answer_en": "With Return of Premium, a guaranteed surrender value is acquired after two years of premium payments, or immediately for Single Pay. The special surrender value uses an expected present value calculation with a current discount rate of 7.75 percent a year."
+  },
+  "policy_loan_restriction": {
+    "questions": [
+      "Can I take a loan against my policy?",
+      "Can I borrow money on this insurance?",
+      "क्या इस पॉलिसी पर लोन मिलेगा?",
+      "Can I borrow against the value of this life insurance?"
+    ],
+    "answer_hi": "इस उत्पाद में पॉलिसी पर लोन या उधार लेने की सुविधा उपलब्ध नहीं है।",
+    "source_sha256": "d48d71d5517c093170f239089288d3ae167d728c1098ef362e7029c23d71a45b",
+    "voice_answer_en": "No, you can't borrow against this policy."
+  },
+  "free_look_cancellation": {
+    "questions": [
+      "Can I cancel after reading the policy?",
+      "How long is the free look cancellation period?",
+      "फ्री लुक अवधि कितनी है?",
+      "Can I get a premium refund if I cancel during the free look period?",
+      "I just bought this policy and want to cancel for a refund",
+      "What deductions apply to a refund during the 30 day review period?",
+      "How many days can I take to review and return the policy?",
+      "Which costs are deducted from a free look premium refund?"
+    ],
+    "answer_hi": "पॉलिसी मिलने की तारीख से 30 दिन की फ्री लुक अवधि होती है, चाहे वह भौतिक या इलेक्ट्रॉनिक रूप में मिली हो। शर्तों से असहमति पर पॉलिसी लौटाकर प्रीमियम वापस ले सकते हैं, जिसमें जोखिम प्रीमियम, स्टाम्प ड्यूटी और मेडिकल जाँच की लागत काटी जाती है।",
+    "source_sha256": "bda1db0e8f74b389b8db695ca6d1925276f3b6f4439f1e39dbee6395f91676be",
+    "voice_answer_en": "You have 30 days from receiving the policy, whether on paper or electronically, to review it. If you disagree with the terms, you can return it for a premium refund, minus the cost of cover, stamp duty, and medical examination costs."
+  },
+  "suicide_exclusion": {
+    "questions": [
+      "What is the suicide exclusion?",
+      "What is paid if suicide occurs in the first year?",
+      "आत्महत्या के मामले में क्या अपवाद है?",
+      "How much is paid if suicide occurs within twelve months of revival?"
+    ],
+    "answer_hi": "जोखिम शुरू होने या पॉलिसी बहाल होने के 12 महीनों के भीतर आत्महत्या से मृत्यु होने पर, नामित व्यक्ति को चुकाए गए कुल प्रीमियम के 80 प्रतिशत और उपलब्ध सरेंडर वैल्यू में से अधिक राशि मिलती है।",
+    "source_sha256": "f98838c3fb400014b58782209cbaa4b476a55e084f3f5f0bb3c7235be5eeef37",
+    "voice_answer_en": "If death is due to suicide within 12 months of the risk starting or the policy being revived, the nominee receives the higher of 80 percent of total premiums paid or the available surrender value on the date of death."
+  },
+  "rider_list": {
+    "questions": [
+      "What optional riders are available?",
+      "Can I add critical illness or disability cover?",
+      "कौन से अतिरिक्त राइडर मिलते हैं?",
+      "What optional add-ons can I attach to this plan?",
+      "Which critical illness and disability riders are offered?"
+    ],
+    "answer_hi": "शुरुआत में पाँच वैकल्पिक राइडर जोड़े जा सकते हैं: एक्सीडेंटल डिसएबिलिटी, प्रोटेक्ट प्लस, हेल्थ प्लस, वेवर ऑफ प्रीमियम और लाइववेल। उनके लाभ और शर्तें अलग हैं; जैसे हेल्थ प्लस में 60 गंभीर बीमारियों का कवर बताया गया है।",
+    "source_sha256": "55fbbd1168c6bd1d2966916d562722c3ce8cce6522ca03faac7abd5107e0002f",
+    "voice_answer_en": "You can add five optional riders when you buy the policy: Accidental Disability, Protect Plus, Health Plus, Waiver of Premium, and LiveWell. Their benefits differ: for example, Health Plus covers 60 critical illnesses, while the Accidental Disability rider pays 1 percent of its sum assured monthly for 10 years on permanent disability. Protect Plus covers accidental death, disability and cancer; Waiver of Premium waives premiums on primary death, disability or critical illness."
+  },
+  "contact_details": {
+    "questions": [
+      "How do I contact HDFC Life customer service?",
+      "What is the support helpline email?",
+      "ग्राहक सेवा का फोन नंबर क्या है?",
+      "How can I reach customer support?",
+      "Where can I find the support email address and helpline?",
+      "Which number should an NRI customer call?"
+    ],
+    "answer_hi": "दस्तावेज़ में एचडीएफसी लाइफ की हेल्पलाइन 022-68446530, एनआरआई हेल्पलाइन +91 89166 94100, और ईमेल service@hdfclife.com दिया गया है।",
+    "source_sha256": "2e4c79c5081e7ce4168e7e69666e94d39a8d5fce9798ab04d7d290ac052ac5c4",
+    "voice_answer_en": "You can reach HDFC Life on 022-68446530, or on the NRI helpline at +91 89166 94100. You can also email service@hdfclife.com."
+  },
+  "esculation_matric": {
+    "questions": [
+      "How do I escalate a complaint?",
+      "Where can I file a grievance?",
+      "शिकायत आगे कैसे बढ़ाएं?",
+      "How can I complain to the Insurance Ombudsman?",
+      "Who handles an unresolved complaint at the branch?"
+    ],
+    "answer_hi": "अनसुलझी शिकायत को शाखा के शिकायत निवारण अधिकारी के पास बढ़ा सकते हैं, या पॉलिसी निर्देशों के अनुसार क्षेत्रीय बीमा लोकपाल के पास ले जा सकते हैं।",
+    "source_sha256": "957394de3bf03dbb6d2a21dd41a8bea3bc094d327f9e648b05ddc17ee0e68ddc",
+    "voice_answer_en": "If your complaint is unresolved, you can take it to the branch Grievance Redressal Officer or the regional Insurance Ombudsman, following the policy guidelines."
+  },
+  "terminal_illness_overview": {
+    "questions": [
+      "Can I get an early payout for terminal illness?",
+      "What is the terminal illness benefit limit?",
+      "लाइलाज बीमारी पर क्या लाभ है?",
+      "How much of the death benefit is paid early for terminal illness?",
+      "What is the age limit for an accelerated terminal illness payout?"
+    ],
+    "answer_hi": "पॉलिसी अवधि में टर्मिनल बीमारी का निदान होने पर अधिकतम 2 करोड़ रुपये तक का मृत्यु लाभ पहले दिया जा सकता है। 80 वर्ष की उम्र के बाद हुए निदान पर यह अग्रिम लाभ लागू नहीं होता।",
+    "source_sha256": "42ee56d3b6dfdd9d88f263ad9eed92cc8f2cad906e4b4c8ab1a8733e7c65148d",
+    "voice_answer_en": "If the person covered is diagnosed with a terminal illness during the policy term, the death benefit can be paid early, up to 2 crore rupees. This early payment doesn't apply if the diagnosis is after age 80."
+  },
+  "terminal_illness_criteria": {
+    "questions": [
+      "Who certifies a terminal illness?",
+      "What qualifies as terminal illness?",
+      "टर्मिनल बीमारी की शर्तें क्या हैं?",
+      "How many doctors must certify a terminal illness?",
+      "What life expectancy qualifies for the terminal illness benefit?"
+    ],
+    "answer_hi": "भारतीय चिकित्सा संघ में पंजीकृत दो स्वतंत्र चिकित्सकों को प्रमाणित करना होगा कि बीमारी से 6 महीनों के भीतर मृत्यु की बहुत अधिक संभावना है। बीमित व्यक्ति को केवल लक्षणों से राहत की पैलिएटिव देखभाल मिल रही होनी चाहिए।",
+    "source_sha256": "f118d61b4e494702727be784031e6a2ab050e5568649491f4e8fb2e0f4373029",
+    "voice_answer_en": "Two independent doctors registered with the Indian Medical Association must certify that the illness is highly likely to cause death within six months. The person covered must also be receiving only palliative care for symptom relief."
+  },
+  "terminal_illness_termination": {
+    "questions": [
+      "Does the policy end after terminal illness payout?",
+      "टर्मिनल बीमारी के भुगतान के बाद पॉलिसी बंद होती है?",
+      "Does cover remain after an accelerated terminal illness payment?",
+      "Will the policy terminate after the full death benefit is paid early?"
+    ],
+    "answer_hi": "अगर अग्रिम टर्मिनल बीमारी भुगतान पूरे मृत्यु लाभ के बराबर है, तो पॉलिसी समाप्त हो जाती है। कुल मृत्यु लाभ अधिक होने पर शेष राशि के लिए पॉलिसी जारी रहती है।",
+    "source_sha256": "d24cf5fd586889bcf788a42ffc5e4d1ad175bd26cebdca0338cfc2a8074494b5",
+    "voice_answer_en": "If the early terminal illness payment is the full death benefit, the policy ends. If the death benefit is higher, the policy continues for the remaining amount."
+  },
+  "policy_overview": {
+    "title": "Policy overview",
+    "questions": [
+      "What is this policy about?",
+      "Explain this insurance plan",
+      "Give me an overview of this policy",
+      "What does this plan cover?",
+      "Tell me about the main benefits of this insurance",
+      "यह पॉलिसी किस बारे में है?",
+      "इस बीमा योजना के बारे में बताइए",
+      "इस प्लान में क्या कवर मिलता है?",
+      "ye policy kya hai",
+      "Summarize the plan and its main benefits",
+      "Can you summarize this insurance plan?",
+      "What are the key features of this policy?"
+    ],
+    "source_ids": [
+      "product_name",
+      "plan_type",
+      "death_benefit_summary",
+      "maturity_benefit"
+    ],
+    "source_sha256_by_id": {
+      "product_name": "4645d5a47b5101c8733615b7b81d6c34f1626c1e0b0e3a5bff2df98a5050e2a7",
+      "plan_type": "65edfc512777108cc5d5d22db234a789679a41cde68be28ef2494e46f94fa0ee",
+      "death_benefit_summary": "0fcd3ae8096a50429f86e3e874775e78938d718639233d0280b4c3124b8b74bb",
+      "maturity_benefit": "d4c8c8c8914090ede999cbddd72d329457dba30c904f571db8023a2de10d741a"
+    },
+    "voice_answer_en": "HDFC Life Click 2 Protect Elite Pro is a life insurance plan. If the person covered dies during the policy term, the nominee receives a lump sum. If you survive to the end and chose Return of Premium when you bought the policy, you'll get 100 percent of the total premiums paid back; otherwise, there's no maturity payout."
+  }
+}

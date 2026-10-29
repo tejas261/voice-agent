@@ -1,0 +1,534 @@
+[
+  [
+    "What is this policy about?",
+    "policy_overview"
+  ],
+  [
+    "Tell me about this policy",
+    "policy_overview"
+  ],
+  [
+    "Could you summarize the insurance plan for me?",
+    "policy_overview"
+  ],
+  [
+    "What does this plan cover?",
+    "policy_overview"
+  ],
+  [
+    "What are the main benefits of this insurance?",
+    "policy_overview"
+  ],
+  [
+    "यह पॉलिसी किस बारे में है?",
+    "policy_overview"
+  ],
+  [
+    "इस बीमा योजना को समझाइए",
+    "policy_overview"
+  ],
+  [
+    "What happens if I stop paying the premium in between?",
+    "paid_up_qualification"
+  ],
+  [
+    "What happens if I stop paying the premium midway?",
+    "paid_up_qualification"
+  ],
+  [
+    "What if I cannot afford the premiums anymore?",
+    "paid_up_qualification"
+  ],
+  [
+    "If I discontinue my payments halfway through, will I lose the cover?",
+    "paid_up_qualification"
+  ],
+  [
+    "अगर मैं बीच में प्रीमियम भरना बंद कर दूं तो क्या होगा?",
+    "paid_up_qualification"
+  ],
+  [
+    "Can I temporarily pause my premiums?",
+    "premium_break_standard"
+  ],
+  [
+    "How do I take a premium break?",
+    "premium_break_standard"
+  ],
+  [
+    "What if I miss my monthly premium due date?",
+    "grace_period_rules"
+  ],
+  [
+    "How many extra days do I have to pay a late premium?",
+    "grace_period_rules"
+  ],
+  [
+    "Can I surrender my policy?",
+    "surrender_value_rop"
+  ],
+  [
+    "When does surrender value start for the ROP option?",
+    "surrender_value_rop"
+  ],
+  [
+    "Will I get back my accumulated premium after the term ends?",
+    "maturity_benefit"
+  ],
+  [
+    "Will I get a refund of my premium if I don't claim it during the insurance period?",
+    "maturity_benefit"
+  ],
+  [
+    "Do unused premiums come back to me when my cover expires?",
+    "maturity_benefit"
+  ],
+  [
+    "पॉलिसी खत्म होने पर प्रीमियम वापस मिलेंगे?",
+    "maturity_benefit"
+  ],
+  [
+    "What if I did not choose return of premium?",
+    "maturity_benefit"
+  ],
+  [
+    "Can I borrow against this policy?",
+    "policy_loan_restriction"
+  ],
+  [
+    "Is it possible to borrow money?",
+    "policy_loan_restriction"
+  ],
+  [
+    "Can I get a refund if I cancel during the free look period?",
+    "free_look_cancellation"
+  ],
+  [
+    "I just bought this policy and want to cancel for a refund",
+    "free_look_cancellation"
+  ],
+  [
+    "Which insurance plan is this?",
+    "product_name"
+  ],
+  [
+    "What's the name of the policy?",
+    "product_name"
+  ],
+  [
+    "What’s the name of the policy?",
+    "product_name"
+  ],
+  [
+    "What is the name of the policy?",
+    "product_name"
+  ],
+  [
+    "Tell me the policy name",
+    "product_name"
+  ],
+  [
+    "What is this policy called?",
+    "product_name"
+  ],
+  [
+    "What is the policy's name?",
+    "product_name"
+  ],
+  [
+    "Can you tell me the full name of this insurance plan?",
+    "product_name"
+  ],
+  [
+    "Name of the plan",
+    "product_name"
+  ],
+  [
+    "What is the product name?",
+    "product_name"
+  ],
+  [
+    "What is the UIN?",
+    "product_name"
+  ],
+  [
+    "Which UIN identifies this insurance product?",
+    "product_name"
+  ],
+  [
+    "इस पॉलिसी का नाम क्या है?",
+    "product_name"
+  ],
+  [
+    "इस बीमा योजना को क्या कहते हैं?",
+    "product_name"
+  ],
+  [
+    "policy ka naam kya hai",
+    "product_name"
+  ],
+  [
+    "What type of insurance is this?",
+    "plan_type"
+  ],
+  [
+    "What is the youngest age allowed to buy this policy?",
+    "age_at_entry"
+  ],
+  [
+    "What is the maximum age at maturity?",
+    "maturity_age"
+  ],
+  [
+    "How long can my policy last?",
+    "policy_term_limits"
+  ],
+  [
+    "What is the minimum sum assured?",
+    "sum_assured_limits"
+  ],
+  [
+    "Who receives the money if the insured dies?",
+    "death_benefit_summary"
+  ],
+  [
+    "How is the death benefit calculated?",
+    "death_benefit_formula"
+  ],
+  [
+    "What does sum assured on death mean?",
+    "sum_assured_on_death"
+  ],
+  [
+    "Can I get an early payout for terminal illness?",
+    "terminal_illness_overview"
+  ],
+  [
+    "Who needs to certify terminal illness?",
+    "terminal_illness_criteria"
+  ],
+  [
+    "Does the policy end after terminal illness payout?",
+    "terminal_illness_termination"
+  ],
+  [
+    "How quickly is a death claim paid?",
+    "immediate_payout_rules"
+  ],
+  [
+    "Is there a premium break during pregnancy?",
+    "premium_break_special"
+  ],
+  [
+    "How does the spouse cover work?",
+    "spouse_cover_summary"
+  ],
+  [
+    "What happens if both spouses die in the same event?",
+    "spouse_cover_exclusions"
+  ],
+  [
+    "Does this plan provide education income for my child?",
+    "education_income_summary"
+  ],
+  [
+    "How are quarterly premiums calculated?",
+    "modal_conversion_factors"
+  ],
+  [
+    "Are there discounts for high insurance cover?",
+    "high_sum_assured_discount"
+  ],
+  [
+    "Do salaried people get a discount?",
+    "salaried_individual_discount"
+  ],
+  [
+    "What riders can I add?",
+    "rider_list"
+  ],
+  [
+    "How do I reach customer support?",
+    "contact_details"
+  ],
+  [
+    "How can I escalate an unresolved complaint?",
+    "esculation_matric"
+  ],
+  [
+    "When can I use smart exit?",
+    "smart_exit_benefit"
+  ],
+  [
+    "What happens if suicide occurs during the first year?",
+    "suicide_exclusion"
+  ],
+  [
+    "What is the weather in Tokyo?",
+    null
+  ],
+  [
+    "What is your online shop delivery tracking number?",
+    null
+  ],
+  [
+    "Is the premium tax deductible?",
+    null
+  ],
+  [
+    "Does this policy cover dental treatment?",
+    null
+  ],
+  [
+    "Can you update my bank account?",
+    null
+  ],
+  [
+    "What is this policy about cryptocurrency?",
+    null
+  ],
+  [
+    "What is my current claim status?",
+    null
+  ],
+  [
+    "How much will I personally pay for this policy?",
+    null
+  ],
+  [
+    "What's the name of my nominee?",
+    null
+  ],
+  [
+    "What is my policy number?",
+    null
+  ],
+  [
+    "What is my policy's current status?",
+    null
+  ],
+  [
+    "Can I change my name on the policy?",
+    null
+  ],
+  [
+    "What is the name of my insurance agent?",
+    null
+  ],
+  [
+    "मेरी पॉलिसी का नंबर क्या है?",
+    null
+  ],
+  [
+    "How old do I need to be to buy this plan?",
+    "age_at_entry"
+  ],
+  [
+    "What's the highest age at which I can enter?",
+    "age_at_entry"
+  ],
+  [
+    "What is the minimum age at maturity?",
+    "maturity_age"
+  ],
+  [
+    "For how many years can I be insured?",
+    "policy_term_limits"
+  ],
+  [
+    "What's the smallest amount of cover I can buy?",
+    "sum_assured_limits"
+  ],
+  [
+    "Is there an upper limit on the insurance cover?",
+    "sum_assured_limits"
+  ],
+  [
+    "If I die, who gets the payout?",
+    "death_benefit_summary"
+  ],
+  [
+    "Is the death benefit paid as one lump sum?",
+    "death_benefit_summary"
+  ],
+  [
+    "How much do you pay out on death?",
+    "death_benefit_formula"
+  ],
+  [
+    "Is there a benefit if I outlive the policy?",
+    "maturity_benefit"
+  ],
+  [
+    "Is smart exit available with return of premium?",
+    "smart_exit_benefit"
+  ],
+  [
+    "How long can I delay a monthly premium?",
+    "grace_period_rules"
+  ],
+  [
+    "How long can I delay an annual premium?",
+    "grace_period_rules"
+  ],
+  [
+    "Do I still have cover in the grace period?",
+    "grace_period_rules"
+  ],
+  [
+    "How many years do I need to pay before I can take a premium holiday?",
+    "premium_break_standard"
+  ],
+  [
+    "Does cover continue while I take a premium break?",
+    "premium_break_standard"
+  ],
+  [
+    "Can a woman pause premiums during pregnancy?",
+    "premium_break_special"
+  ],
+  [
+    "Can my wife be included under the plan?",
+    "spouse_cover_summary"
+  ],
+  [
+    "What's the maximum age difference for spouse cover?",
+    "spouse_cover_summary"
+  ],
+  [
+    "Can I choose spouse cover later?",
+    "spouse_cover_summary"
+  ],
+  [
+    "How much does my child's education benefit pay?",
+    "education_income_summary"
+  ],
+  [
+    "At what age does the child's education income end?",
+    "education_income_summary"
+  ],
+  [
+    "How much is the immediate death claim payment?",
+    "immediate_payout_rules"
+  ],
+  [
+    "How long do I have to review and cancel this policy?",
+    "free_look_cancellation"
+  ],
+  [
+    "Are medical costs deducted from a free look refund?",
+    "free_look_cancellation"
+  ],
+  [
+    "Can I borrow against the cash value?",
+    "policy_loan_restriction"
+  ],
+  [
+    "When can an ROP policy be surrendered?",
+    "surrender_value_rop"
+  ],
+  [
+    "Does a single premium plan get surrender value immediately?",
+    "surrender_value_rop"
+  ],
+  [
+    "How do I reach the insurance ombudsman?",
+    "esculation_matric"
+  ],
+  [
+    "What's the customer service email address?",
+    "contact_details"
+  ],
+  [
+    "How much discount do salaried buyers get in the first year?",
+    "salaried_individual_discount"
+  ],
+  [
+    "Can I get a discount for two crore cover?",
+    "high_sum_assured_discount"
+  ],
+  [
+    "What is the six month condition for terminal illness?",
+    "terminal_illness_criteria"
+  ],
+  [
+    "How much can be paid early for a terminal illness?",
+    "terminal_illness_overview"
+  ],
+  [
+    "Does my policy stop after the early terminal illness benefit?",
+    "terminal_illness_termination"
+  ],
+  [
+    "Are there any optional add-ons?",
+    "rider_list"
+  ],
+  [
+    "What percentage is paid for suicide in the first year?",
+    "suicide_exclusion"
+  ],
+  [
+    "What's the name of the hospital network?",
+    null
+  ],
+  [
+    "How do I change my nominee?",
+    null
+  ],
+  [
+    "Can you send me the policy document?",
+    null
+  ],
+  [
+    "Does the policy cover my car?",
+    null
+  ],
+  [
+    "What is the agent's commission?",
+    null
+  ],
+  [
+    "What is the GST rate?",
+    null
+  ],
+  [
+    "What is the claim settlement ratio?",
+    null
+  ],
+  [
+    "How much premium for a 35 year old?",
+    null
+  ],
+  [
+    "Can I get a loan against my house?",
+    null
+  ],
+  [
+    "What is the name of the company I work for?",
+    null
+  ],
+  [
+    "Will you refund my health insurance premiums?",
+    null
+  ],
+  [
+    "Can you tell me my bank account number?",
+    null
+  ],
+  [
+    "Can I claim a tax deduction under section 80C?",
+    null
+  ],
+  [
+    "Does this policy cover surgery?",
+    null
+  ],
+  [
+    "Does the plan provide hospital cash?",
+    null
+  ],
+  [
+    "How much surrender value do I personally have today?",
+    null
+  ]
+]

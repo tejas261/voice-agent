@@ -1,0 +1,5 @@
+-r retrieval.txt
+# Use Python 3.12 for native speech wheels.
+faster-whisper>=1.1,<2
+kokoro-onnx>=0.4.9,<0.5
+scipy>=1.13,<2

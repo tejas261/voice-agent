@@ -1,0 +1,74 @@
+PRODUCT_NAME: HDFC Life Click 2 Protect Elite Pro (UIN: 101N193V01)
+PLAN_TYPE: Non-Linked, Non-Participating, Individual, Pure Risk Premium/Savings Life Insurance Plan. [0.1.2, 0.1.3]
+
+---
+SECTION: PLAN_ELIGIBILITY_AND_LIMITS
+AGE_AT_ENTRY: Minimum age at entry is 18 years. Maximum age at entry is 65 years. All ages are based on the last birthday. [0.1.4]
+MATURITY_AGE: Minimum age at maturity is 28 years. Maximum age at maturity is 85 years. [0.1.4]
+POLICY_TERM_LIMITS: Maximum policy term is calculated as 85 less the Age at Entry. The minimum policy term varies by pay type: 10 years for 5-Pay and Regular Pay; 15 years for 10-Pay; 20 years for 15-Pay. [0.1.4]
+SUM_ASSURED_LIMITS: The Minimum Basic Sum Assured is INR 50,00,000 (50 Lakhs). There is no maximum limit, subject to the Board Approved Underwriting Policy (BAUP). [0.1.4]
+
+---
+SECTION: DEATH_BENEFIT_CALCULATION
+DEATH_BENEFIT_SUMMARY: If the life assured passes away during the policy term, the death benefit is paid as a lump sum to the nominee. [0.1.5]
+DEATH_BENEFIT_FORMULA: The payable death benefit is the higher of: 1. Sum Assured on Death, or 2. 105% of Total Premiums Paid up to the date of death. [0.1.5]
+SUM_ASSURED_ON_DEATH: The Sum Assured on Death is defined as the highest of: 10 times the Annualized Premium, the Basic Sum Assured, or the Sum Assured on Maturity. [0.1.5]
+
+---
+SECTION: TERMINAL_ILLNESS_BENEFIT
+TERMINAL_ILLNESS_OVERVIEW: If diagnosed with a terminal illness during the policy term, the death benefit up to a maximum of INR 2 Crores will be accelerated (paid early). This acceleration does not apply to diagnoses made after the age of 80. [0.1.2, 0.1.5]
+TERMINAL_ILLNESS_CRITERIA: To qualify as terminally ill, two independent medical practitioners registered with the Indian Medical Association must certify that the illness is highly likely to lead to death within 6 months. The insured must only be receiving palliative care for symptom relief. [0.1.6]
+TERMINAL_ILLNESS_TERMINATION: If the accelerated terminal illness payout equals the full death benefit, the policy terminates. If the total death benefit is larger, the policy continues for the remaining balance. [0.1.5]
+
+---
+SECTION: MATURITY_AND_SMART_EXIT
+MATURITY_BENEFIT: Upon surviving until the end of the policy term, the maturity benefit is 100% of the Total Premiums Paid if the Return of Premium (ROP) option was selected at inception. If ROP was not selected, the maturity benefit is Nil. [0.1.6]
+SMART_EXIT_BENEFIT: Policyholders can cancel their active policy to receive a Smart Exit Benefit equal to 100% of Total Premiums Paid. This option can be exercised in any policy year greater than 25, but strictly excluded during the final 5 policy years. It is not available if the Return of Premium option was chosen. [0.1.2, 0.1.3, 0.1.13]
+
+---
+SECTION: PREMIUM_BREAK_BENEFITS
+PREMIUM_BREAK_STANDARD: After 5 policy years are completed with all premiums paid, the policyholder can submit a written request to pause premiums for up to 12 months. Request must be made 30 days in advance (15 days for monthly mode). Coverage stays fully active, but any claim payout during this window will deduct the deferred amount. [0.1.2, 0.1.3, 0.1.9]
+PREMIUM_BREAK_SPECIAL: Female lives can exercise a 12-month premium break benefit specifically during pregnancy (or within 6 months of labor) or within 6 months of a spouse's death. This is available after completing 2 policy years. There must be a gap of at least 2 policy years between requests. [0.1.9, 0.1.10]
+
+---
+SECTION: SPOUSE_COVER_OPTION
+SPOUSE_COVER_SUMMARY: Opted strictly at inception for married couples with a maximum 10-year age gap. Upon the primary life assured's death, a lump-sum death benefit is paid out, and future premiums are waived. The spouse then receives a continuous death benefit cover equal to a chosen percentage (capped at 50%) of the base sum assured for the remaining policy term. [0.1.2, 0.1.3, 0.1.6]
+SPOUSE_COVER_EXCLUSIONS: The spouse cover automatically terminates and will not pay out if: 1. Both primary insured and spouse die simultaneously or from the same event, 2. The spouse is 75 years or older at the time of the primary insured's death, or 3. Suicide occurs within 12 months of the risk commencement or primary death. [0.1.7]
+
+---
+SECTION: EDUCATION_INCOME_BENEFIT
+EDUCATION_INCOME_SUMMARY: Available on payment of additional premium for children aged 0 to 20 at entry (where primary insured's entry age is at least 20 + child's age). Upon the primary insured's death, equal annual instalments totaling 10% of the Sum Assured (up to a maximum cap of INR 10 Lakhs) are paid out until the child turns 25 or the policy term ends, whichever is lower. [0.1.2, 0.1.8]
+
+---
+SECTION: IMMEDIATE_PAYOUT_ON_CLAIM
+IMMEDIATE_PAYOUT_RULES: For active policies in force past a 1-year waiting period, an accelerated instant interim death benefit of INR 5 Lakhs will be paid within 1 working day of registering a death claim intimation. The remaining sum assured balance is released after the comprehensive claim investigation is complete. [0.1.2, 0.1.3, 0.1.8]
+
+---
+SECTION: PREMIUM_FREQUENCY_AND_GRACE_PERIOD
+GRACE_PERIOD_RULES: The plan provides a grace period of 30 days for yearly, half-yearly, and quarterly premium payment modes. For monthly premium frequencies, the grace period is 15 days. Valid claims arising during the grace period will be honored, less the unpaid due premium. [0.1.11]
+MODAL_CONVERSION_FACTORS: For non-annual premium payments, the annual premium is multiplied by a conversion factor: Half-yearly is 0.5100, Quarterly is 0.2600, and Monthly is 0.0875. [0.1.4]
+
+---
+SECTION: HIGH_SUM_ASSURED_AND_SALARIED_DISCOUNTS
+HIGH_SUM_ASSURED_DISCOUNT: A first-year discount applies if the Basic Sum Assured is INR 2 Crores or higher (10% for Limited Pay, 7% for Regular Pay). Alternatively, customers can opt for a lifetime premium discount: 1.75% for 5-Pay, 1.00% for 10-Pay/15-Pay, and 0.75% for Regular Pay. [0.1.2, 0.1.11]
+SALARIED_INDIVIDUAL_DISCOUNT: Salaried buyers receive a 7% first-year premium discount. Alternatively, they can choose a lifetime premium discount: 1.25% for 5-Pay and 0.75% for 10-Pay, 15-Pay, or Regular Pay modes. [0.1.2, 0.1.11]
+
+---
+SECTION: POLICY_LAPSE_PAID_UP_AND_SURRENDER
+PAID_UP_QUALIFICATION: A policy only acquires a reduced paid-up value if the Return of Premium (ROP) option is selected and at least 1 full year of premiums has been paid. In all other plan options, the policy lapses completely upon premium non-payment with zero value. [0.1.12]
+SURRENDER_VALUE_ROP: If the Return of Premium option is active, a Guaranteed Surrender Value (GSV) is acquired after 2 years of premium payment (immediate for Single Pay). The Special Surrender Value (SSV) uses an expected present value calculation currently set at a discount rate of 7.75% per annum. [0.1.12]
+POLICY_LOAN_RESTRICTION: No policy loan options or borrowing facilities are available under this product. [0.1.16]
+
+---
+SECTION: FREE_LOOK_PERIOD_AND_SUICIDE_EXCLUSION
+FREE_LOOK_CANCELLATION: Policyholders have a 30-day free-look period from the date of receipt (physical or electronic) to review terms. Disagreed policies can be returned for a premium refund, subject to deductions for risk premium on cover, stamp duty, and medical exam costs. [0.1.15]
+SUICIDE_EXCLUSION: If death occurs due to suicide within 12 months from the risk commencement date or policy revival date, the nominee is entitled only to the higher of: 80% of total premiums paid or the available surrender value at the date of death. [0.1.7, 0.1.15]
+
+---
+SECTION: RIDER_OPTIONS_OVERVIEW
+RIDER_LIST: Five distinct non-linked optional riders can be attached at inception: 1. Accidental Disability Rider (1% of rider sum assured monthly for 10 years on permanent disability), 2. Protect Plus Rider (Accidental death/disability/cancer payouts), 3. Health Plus Rider (Covers 60 Critical Illnesses), 4. Waiver of Premium Rider (Waives premiums upon primary death/disability/critical illness), and 5. LiveWell Rider. [0.1.13, 0.1.14]
+
+---
+SECTION: CUSTOMER_SERVICE_AND_GREIVANCE
+CONTACT_DETAILS: Customers can contact HDFC Life via the helpline at 022-68446530, NRI helpline at +91 89166 94100, or via email at service@hdfclife.com. [0.1.18]
+ESCULATION_MATRIC: Unresolved complaints can be escalated through the branch Grievance Redressal Officer or taken to the regional Insurance Ombudsman as per the policy guidelines. [0.1.18]

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6f1">
+  <title>Listen · Local voice support</title>
+  <link rel="stylesheet" href="/static/styles.css">
+  <script type="module" src="/static/app.js"></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="/" aria-label="Listen home"><span class="brand-mark" aria-hidden="true">l<span>ı</span>l</span> listen<span class="brand-period">.</span></a>
+    <span class="header-caption">Customer support playground</span>
+    <span id="connection" class="connection">Connecting…</span>
+  </header>
+  <main>
+    <div class="intro"><div><span class="eyebrow">YOUR LOCAL VOICE AGENT</span><h1>Good answers.<br>A conversation away.</h1></div><p>Ask in English or Hindi.<br>Answers come from your knowledge base.</p></div>
+    <div class="workspace-toolbar">
+      <p id="mode-description">Speak or type. Your conversation stays here.</p>
+      <label class="mode-toggle" for="voice-only"><span>Voice only</span><input id="voice-only" type="checkbox" role="switch" aria-controls="chat-panel" aria-describedby="mode-description"><span class="switch-track" aria-hidden="true"></span></label>
+    </div>
+    <div id="notice" class="notice" role="status" hidden><span id="notice-text"></span><button id="show-chat" class="text-button" hidden>Show chat</button></div>
+    <div id="workspace" class="workspace">
+      <section id="voice-panel" class="voice-panel" aria-label="Voice controls" data-phase="idle">
+        <div class="panel-top"><span class="small-label">YOUR VOICE ASSISTANT</span><label class="language-label">Language <select id="language"><option value="en">English</option><option value="hi">हिन्दी</option></select></label></div>
+        <div class="voice-picker"><label for="reply-voice">Reply voice <select id="reply-voice"><option value="default">Standard voice</option></select></label><button id="manage-voices" class="text-button" aria-haspopup="dialog">Clone a voice</button></div>
+        <div class="voice-center">
+          <span id="voice-status" class="voice-status">Ready</span>
+          <div class="visualizer" id="visualizer"><canvas id="waveform" width="560" height="180" aria-hidden="true"></canvas></div>
+          <div class="voice-copy" role="status" aria-live="polite" aria-atomic="true"><h2 id="voice-title">Ready when you are.</h2><p id="voice-hint">Tap the microphone to ask a question.</p></div>
+          <div class="mic-control">
+            <button id="mic" class="mic-button" aria-labelledby="mic-label" aria-describedby="voice-hint" disabled>
+              <svg class="mic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8"/></svg>
+              <span class="finish-icon" aria-hidden="true"></span>
+            </button>
+            <span id="mic-label" class="mic-label">Start speaking</span>
+          </div>
+          <div id="recording-progress" class="recording-progress" hidden><div><span>Recording</span><span id="recording-time">0:00 / 0:20</span></div><progress id="recording-meter" value="0" max="20" aria-label="Recording time used"></progress></div>
+          <div class="voice-actions"><button id="stop" class="quiet" hidden>Stop response</button><button id="replay" class="quiet" hidden>Listen again</button></div>
+        </div>
+        <div class="voice-options"><label id="autoplay-option"><input id="autoplay" type="checkbox" checked> Read answers aloud</label><span id="voice-only-note" hidden>Answers spoken aloud</span><button id="new-conversation" class="text-button" hidden>New conversation</button><span id="audio-privacy">Audio stays on this device</span></div>
+      </section>
+      <section id="chat-panel" class="conversation-panel" aria-label="Conversation">
+        <div class="panel-top"><h2>Conversation</h2><button id="clear" class="text-button">Clear</button></div>
+        <div id="conversation" class="conversation" role="log" aria-live="polite" aria-relevant="additions">
+          <div id="empty" class="empty"><div class="empty-mark" aria-hidden="true">“</div><h3>Let's start with a question.</h3><p>Speak naturally, or try a question from your document.</p><div class="suggestions"></div></div>
+        </div>
+        <form id="question-form" class="composer"><label class="sr-only" for="question">Type your question</label><input id="question" placeholder="Or type your question…" maxlength="1000" autocomplete="off" required><button id="send" type="submit" aria-label="Send question">↑</button></form>
+      </section>
+    </div>
+    <div class="footnote"><p><span class="sample-label">ACTIVE KNOWLEDGE BASE</span><span id="knowledge-source">Loading document…</span></p><span id="provider-label">No paid APIs</span></div>
+    <details class="settings"><summary>Connection settings</summary><label for="api-token">API token (only if configured on your server)</label><div class="token-row"><input id="api-token" type="password" autocomplete="off" placeholder="Leave blank for localhost"><button id="connect" class="text-button">Connect</button></div><p>The token is kept only in this tab's memory.</p><p id="engine">Local speech</p></details>
+  </main>
+  <dialog id="voice-studio" class="voice-studio" aria-labelledby="studio-title">
+    <div class="studio-heading"><div><span class="eyebrow">YOUR ASSISTANT, YOUR SOUND</span><h2 id="studio-title">Clone a voice</h2></div><button id="close-studio" class="text-button" aria-label="Close voice settings">✕</button></div>
+    <p class="studio-intro">Record or upload 3–20 seconds of clear English speech. Speak as if you're helping one customer: relaxed, clear, and conversational. Your clone follows the pacing and tone of this sample. Saved samples stay on this computer and can be deleted anytime.</p>
+    <p id="clone-availability" class="studio-note">Checking voice cloning…</p>
+    <form id="clone-form">
+      <label for="clone-name">Voice name</label><input id="clone-name" maxlength="60" placeholder="My support voice" required>
+      <div id="reference-capture" class="reference-capture" data-phase="idle">
+        <div class="capture-actions"><button id="record-reference" type="button" class="record-reference" aria-describedby="capture-hint">Record voice</button><button id="cancel-reference" type="button" class="text-button" hidden>Cancel recording</button></div>
+        <div id="reference-recording" class="reference-recording" hidden><div><span>Recording <span aria-hidden="true">●</span></span><output id="reference-time" aria-label="Recording duration">0.0 / 20s</output></div><meter id="reference-level" min="0" max="1" value="0" aria-label="Microphone input level"></meter></div>
+        <p id="capture-hint" class="studio-note" role="status">Speak naturally for 3–20 seconds. Recording stops automatically.</p>
+      </div>
+      <label for="clone-file">Or upload an audio file</label><input id="clone-file" type="file" accept="audio/*">
+      <audio id="reference-player" controls hidden aria-label="Your reference recording"></audio>
+      <div class="transcript-heading"><label for="clone-transcript">Words spoken in the sample</label><button id="transcribe-reference" type="button" class="text-button" disabled>Fill from audio</button></div>
+      <textarea id="clone-transcript" rows="3" maxlength="1000" placeholder="Enter the exact words, or use Fill from audio and check the transcript." required></textarea>
+      <button id="save-voice" class="primary" type="submit" disabled>Save & preview</button>
+    </form>
+    <p id="studio-status" class="studio-status" role="status" aria-live="polite"></p>
+    <audio id="clone-player" controls hidden aria-label="Cloned voice preview"></audio>
+    <div class="saved-voices"><h3>Saved voices</h3><p id="no-saved-voices">Your saved voices will appear here.</p><div id="voice-list"></div></div>
+    <p class="studio-note">Cloned voices are available for English. Hindi uses the standard voice.</p>
+  </dialog>
+  <footer><span>Built to listen. Grounded in your documents.</span><span>English / हिन्दी</span></footer>
+</body>
+</html>

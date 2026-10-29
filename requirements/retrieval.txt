@@ -1,0 +1,5 @@
+-r base.txt
+# CPU-only ONNX models; no PyTorch or hosted embedding API.
+onnxruntime>=1.20,<2
+tokenizers>=0.21,<1
+numpy>=1.26,<3

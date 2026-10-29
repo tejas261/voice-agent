@@ -1,0 +1,3 @@
+# Separate optional worker for Qwen3 voice cloning on Apple Silicon.
+# Keep its Transformers/MLX dependencies isolated from the main speech stack.
+mlx-audio==0.6.1

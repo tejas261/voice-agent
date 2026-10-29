@@ -1,0 +1,243 @@
+[
+  {
+    "question": "I am seventeen; can I sign up for this cover?",
+    "expected_sources": [
+      "age_at_entry"
+    ],
+    "answer_patterns": [
+      "no|not",
+      "18|eighteen"
+    ]
+  },
+  {
+    "question": "I make it to the end without passing away. Do all my payments come back?",
+    "expected_sources": [
+      "maturity_benefit"
+    ],
+    "answer_patterns": [
+      "return of premium|ROP",
+      "if|only",
+      "no|nil|nothing|zero"
+    ]
+  },
+  {
+    "question": "I skipped the money-back option when signing up. Is there anything payable when the cover finishes?",
+    "expected_sources": [
+      "maturity_benefit"
+    ],
+    "answer_patterns": [
+      "no|nil|nothing|zero"
+    ]
+  },
+  {
+    "question": "What is the product called, who sells it, and is it linked to the stock market?",
+    "expected_sources": [
+      "product_name",
+      "plan_type"
+    ],
+    "answer_patterns": [
+      "HDFC",
+      "Click 2 Protect Elite Pro",
+      "non-linked|not linked|not.*stock"
+    ]
+  },
+  {
+    "question": "Money is tight this month. Does protection disappear immediately if I miss an instalment?",
+    "expected_sources": [
+      "grace_period_rules"
+    ],
+    "answer_patterns": [
+      "15|fifteen",
+      "30|thirty"
+    ]
+  },
+  {
+    "question": "Is a temporary payment holiday possible without giving up cover?",
+    "expected_sources": [
+      "premium_break_standard"
+    ],
+    "answer_patterns": [
+      "5|five",
+      "12|twelve|year"
+    ]
+  },
+  {
+    "question": "My other half is eleven years younger than me. Can I add them to this cover?",
+    "expected_sources": [
+      "spouse_cover_summary"
+    ],
+    "answer_patterns": [
+      "no|not",
+      "10|ten"
+    ]
+  },
+  {
+    "question": "Will my youngster keep receiving study money after turning twenty-five?",
+    "expected_sources": [
+      "education_income_summary"
+    ],
+    "answer_patterns": [
+      "25|twenty-five",
+      "no|not|stop|end"
+    ]
+  },
+  {
+    "question": "Can I change my mind after the documents arrive, and how much time have I got?",
+    "expected_sources": [
+      "free_look_cancellation"
+    ],
+    "answer_patterns": [
+      "30|thirty"
+    ]
+  },
+  {
+    "question": "If only part of the death benefit is advanced for terminal illness, does everything end?",
+    "expected_sources": [
+      "terminal_illness_termination"
+    ],
+    "answer_patterns": [
+      "remain|balance|continues|continue"
+    ]
+  },
+  {
+    "question": "Are people on a salary offered a cheaper first year?",
+    "expected_sources": [
+      "salaried_individual_discount"
+    ],
+    "answer_patterns": [
+      "7|seven"
+    ]
+  },
+  {
+    "question": "Can the insurer lend me money using this plan as security?",
+    "expected_sources": [
+      "policy_loan_restriction"
+    ],
+    "answer_patterns": [
+      "no|not"
+    ]
+  },
+  {
+    "question": "Give me a simple introduction to this insurance.",
+    "expected_sources": [
+      "product_name",
+      "plan_type"
+    ],
+    "answer_patterns": [
+      "life|death",
+      "HDFC|Click 2 Protect"
+    ]
+  },
+  {
+    "question": "अगर अंत तक मुझे कुछ नहीं हुआ तो जो पैसे जमा किए हैं वे वापस आएंगे?",
+    "language": "hi",
+    "expected_sources": [
+      "maturity_benefit"
+    ],
+    "answer_patterns": [
+      "विकल्प|आरओपी|ROP",
+      "नहीं|शून्य"
+    ]
+  },
+  {
+    "question": "सत्रह साल की उम्र में क्या यह बीमा खरीद सकते हैं?",
+    "language": "hi",
+    "expected_sources": [
+      "age_at_entry"
+    ],
+    "answer_patterns": [
+      "नहीं",
+      "18|अठारह"
+    ]
+  },
+  {
+    "question": "मेरी पत्नी मुझसे बारह साल छोटी है, क्या उसे साथ में सुरक्षा मिलेगी?",
+    "language": "hi",
+    "expected_sources": [
+      "spouse_cover_summary"
+    ],
+    "answer_patterns": [
+      "नहीं",
+      "10|दस"
+    ]
+  },
+  {
+    "question": "And if I didn't buy that option?",
+    "history": [
+      {
+        "role": "user",
+        "content": "Do I get my premiums back when I reach the end?"
+      },
+      {
+        "role": "assistant",
+        "content": "Premiums are returned at maturity only if Return of Premium was chosen at inception."
+      }
+    ],
+    "expected_sources": [
+      "maturity_benefit"
+    ],
+    "answer_patterns": [
+      "no|nil|nothing|zero"
+    ]
+  },
+  {
+    "question": "Tell me today's share price of the company behind this plan.",
+    "expected_sources": []
+  },
+  {
+    "question": "Can I claim for water damage to my car?",
+    "expected_sources": []
+  },
+  {
+    "question": "Could I borrow against my home as collateral?",
+    "expected_sources": []
+  },
+  {
+    "question": "Do I personally have the return-of-premium option switched on?",
+    "expected_sources": []
+  },
+  {
+    "question": "Which exact amount have I paid into my account so far?",
+    "expected_sources": []
+  },
+  {
+    "question": "Does this cover my dental operation in a cashless hospital?",
+    "expected_sources": []
+  },
+  {
+    "question": "क्या मेरा भुगतान आपके खाते में आ गया है?",
+    "language": "hi",
+    "expected_sources": []
+  },
+  {
+    "question": "Will I get a refund of my premium if I don't claim it during the insurance period?",
+    "expected_sources": [
+      "maturity_benefit"
+    ],
+    "answer_patterns": [
+      "ROP|return.of.premium",
+      "if|only",
+      "no|nil|nothing"
+    ],
+    "forbidden_patterns": [
+      "\\blaps(?:e[sd]?|ing)\\b",
+      "\\bpaid[\\s‐‑–-]+up\\b",
+      "\\bfree[\\s‐‑–-]+look\\b",
+      "\\bsurrender\\b"
+    ]
+  },
+  {
+    "question": "What happens if I stop paying the premium midway?",
+    "expected_sources": [
+      "grace_period_rules",
+      "paid_up_qualification"
+    ],
+    "answer_patterns": [
+      "15|fifteen",
+      "30|thirty",
+      "ROP|return.of.premium",
+      "1|one",
+      "laps"
+    ]
+  }
+]

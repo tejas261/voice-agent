@@ -1,0 +1,122 @@
+[
+  [
+    "What's the plan called?",
+    "product_name"
+  ],
+  [
+    "Which company offers this plan?",
+    "product_name"
+  ],
+  [
+    "How many days do I have if my monthly premium is overdue?",
+    "grace_period_rules"
+  ],
+  [
+    "How many days for a yearly premium that's late?",
+    "grace_period_rules"
+  ],
+  [
+    "Will I receive money at maturity without ROP?",
+    "maturity_benefit"
+  ],
+  [
+    "Is my husband eligible for spouse cover?",
+    "spouse_cover_summary"
+  ],
+  [
+    "Can my spouse be more than ten years older?",
+    "spouse_cover_summary"
+  ],
+  [
+    "Do I get a loan on this plan?",
+    "policy_loan_restriction"
+  ],
+  [
+    "Do claims remain valid during the payment grace period?",
+    "grace_period_rules"
+  ],
+  [
+    "How can I pause payments for a year?",
+    "premium_break_standard"
+  ],
+  [
+    "How many doctors need to confirm that I'm terminally ill?",
+    "terminal_illness_criteria"
+  ],
+  [
+    "Is there a limit to the terminal illness advance?",
+    "terminal_illness_overview"
+  ],
+  [
+    "Can I join at age 17?",
+    "age_at_entry"
+  ],
+  [
+    "What is the maximum cover amount?",
+    "sum_assured_limits"
+  ],
+  [
+    "What happens when the insured person passes away?",
+    "death_benefit_summary"
+  ],
+  [
+    "Can I review the policy before deciding to keep it?",
+    "free_look_cancellation"
+  ],
+  [
+    "Do I get a discount if I am employed on a salary?",
+    "salaried_individual_discount"
+  ],
+  [
+    "When does education support for my child finish?",
+    "education_income_summary"
+  ],
+  [
+    "इस योजना का पूरा नाम बताइए",
+    "product_name"
+  ],
+  [
+    "महीने की किस्त देर से भरूं तो कितने दिन मिलेंगे?",
+    "grace_period_rules"
+  ],
+  [
+    "पॉलिसी में लोन की सुविधा है?",
+    "policy_loan_restriction"
+  ],
+  [
+    "अगर मैं प्रीमियम देना छोड़ दूं तो क्या कवर रहेगा?",
+    "paid_up_qualification"
+  ],
+  [
+    "Which hospital can I visit cashless?",
+    null
+  ],
+  [
+    "What is my outstanding loan balance?",
+    null
+  ],
+  [
+    "What is the premium price for me?",
+    null
+  ],
+  [
+    "What is the share price of HDFC Life?",
+    null
+  ],
+  [
+    "What's my nominee's phone number?",
+    null
+  ],
+  [
+    "Is flood damage to my house covered?",
+    null
+  ],
+  [
+    "How do I file a motor insurance claim?",
+    null
+  ],
+  [
+    "Has my refund been credited?",
+    null
+  ]
+]

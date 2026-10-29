@@ -1,0 +1,44 @@
+[
+  {
+    "id": "delivery",
+    "title": "Sample shop — delivery times",
+    "questions": ["How long does delivery take?", "When will my order arrive?", "shipping delivery time days", "डिलीवरी कब होगी", "ऑर्डर कितने दिन में आएगा", "delivery kab hogi", "order kab aayega"],
+    "answer_en": "Standard delivery takes 3 to 5 business days after dispatch. I can explain the delivery policy, but cannot look up a live order.",
+    "answer_hi": "सामान भेजे जाने के बाद सामान्य डिलीवरी में 3 से 5 कार्य दिवस लगते हैं। मैं डिलीवरी की नीति समझा सकती हूँ, लेकिन किसी असली ऑर्डर की स्थिति नहीं देख सकती।"
+  },
+  {
+    "id": "returns",
+    "title": "Sample shop — returns",
+    "questions": ["How can I return a product?", "What is your return policy?", "return window unused original packaging", "सामान वापस कैसे करें", "वापसी की नीति क्या है", "return kaise karu", "saman wapas karna hai"],
+    "answer_en": "Unused products in their original packaging can be returned within 7 days of delivery. Contact the support team to request a return.",
+    "answer_hi": "बिना इस्तेमाल किया हुआ सामान उसकी मूल पैकिंग में डिलीवरी के 7 दिनों के अंदर वापस किया जा सकता है। वापसी के लिए सहायता टीम से संपर्क करें।"
+  },
+  {
+    "id": "refunds",
+    "title": "Sample shop — refunds",
+    "questions": ["When will I get my refund?", "refund money back payment days", "रिफंड कब मिलेगा", "पैसे वापस कब आएंगे", "paise wapas kab aayenge", "refund kab milega"],
+    "answer_en": "Refunds reach the original payment method within 5 to 7 business days after the returned product passes inspection. I cannot check an individual refund status.",
+    "answer_hi": "लौटाए गए सामान की जाँच पूरी होने के बाद 5 से 7 कार्य दिवसों में पैसे भुगतान के मूल माध्यम में वापस आ जाते हैं। मैं किसी व्यक्तिगत रिफंड की स्थिति नहीं देख सकती।"
+  },
+  {
+    "id": "cancellation",
+    "title": "Sample shop — cancellation",
+    "questions": ["Can I cancel my order?", "cancel cancellation before dispatch", "ऑर्डर रद्द कैसे करें", "कैंसिल करना है", "order cancel karna hai", "order radd karna hai"],
+    "answer_en": "You can request cancellation before your order is dispatched. After dispatch, the return policy applies. I can explain the process but cannot cancel an order.",
+    "answer_hi": "ऑर्डर भेजे जाने से पहले उसे रद्द करने का अनुरोध कर सकते हैं। भेजे जाने के बाद वापसी की नीति लागू होती है। मैं प्रक्रिया समझा सकती हूँ, लेकिन ऑर्डर रद्द नहीं कर सकती।"
+  },
+  {
+    "id": "payments",
+    "title": "Sample shop — payment methods",
+    "questions": ["Which payment methods do you accept?", "UPI card cash payment", "क्या यूपीआई स्वीकार करते हैं", "भुगतान कैसे करें", "payment kaise kare", "cash on delivery"],
+    "answer_en": "We accept UPI, debit cards, and credit cards. Cash on delivery is not available.",
+    "answer_hi": "यूपीआई, डेबिट कार्ड और क्रेडिट कार्ड स्वीकार किए जाते हैं। कैश ऑन डिलीवरी उपलब्ध नहीं है।"
+  },
+  {
+    "id": "support",
+    "title": "Sample shop — support hours",
+    "questions": ["What are your support hours?", "When is customer service open?", "human agent representative support contact", "सहायता टीम से बात करनी है", "ग्राहक सेवा का समय", "agent se baat karni hai", "support timings"],
+    "answer_en": "The support team is available Monday to Saturday, from 9 AM to 6 PM India time. This demo has no live support connection.",
+    "answer_hi": "सहायता टीम सोमवार से शनिवार, भारतीय समय के अनुसार सुबह 9 बजे से शाम 6 बजे तक उपलब्ध है। इस डेमो में असली सहायता टीम से संपर्क नहीं जुड़ा है।"
+  }
+]

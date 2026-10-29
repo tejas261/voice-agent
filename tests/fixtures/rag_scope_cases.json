@@ -1,0 +1,57 @@
+[
+  {
+    "question": "Could I borrow against my home as collateral?",
+    "expected_sources": []
+  },
+  {
+    "question": "Can the insurer lend me money using this plan as security?",
+    "expected_sources": [
+      "policy_loan_restriction"
+    ],
+    "answer_patterns": [
+      "no|not"
+    ]
+  },
+  {
+    "question": "Give me a simple introduction to this insurance.",
+    "expected_sources": [
+      "product_name",
+      "plan_type"
+    ],
+    "answer_patterns": [
+      "life|death",
+      "HDFC|Click 2 Protect"
+    ]
+  },
+  {
+    "question": "Can I borrow against this policy to help pay for my home?",
+    "expected_sources": [
+      "policy_loan_restriction"
+    ],
+    "answer_patterns": [
+      "no|not"
+    ]
+  },
+  {
+    "question": "Can I borrow against my gold jewellery?",
+    "expected_sources": []
+  },
+  {
+    "question": "What happens if I stop paying the instalments on my car loan?",
+    "expected_sources": []
+  },
+  {
+    "question": "Can I use my car as security for a bank loan?",
+    "expected_sources": []
+  },
+  {
+    "question": "क्या मैं इस पॉलिसी पर लोन ले सकता हूँ?",
+    "language": "hi",
+    "expected_sources": [
+      "policy_loan_restriction"
+    ],
+    "answer_patterns": [
+      "नहीं"
+    ]
+  }
+]
