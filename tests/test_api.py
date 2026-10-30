@@ -42,7 +42,8 @@ class FakeSpeech:
 
 @pytest.fixture
 def client(settings):
-    with TestClient(create_app(settings, speech=FakeSpeech())) as client:
+    config = settings.model_copy(update={"api_token": SecretStr("operator-test")})
+    with TestClient(create_app(config, speech=FakeSpeech()), headers={"Authorization": "Bearer operator-test"}) as client:
         yield client
 
 
@@ -59,7 +60,7 @@ def test_ui_status_health(client):
 
 
 def test_frontend_build_urls_keep_modules_together_and_refresh_cached_players(client):
-    page = client.get("/")
+    page = client.get("/testing")
     assert page.headers["cache-control"] == "no-store"
     path = re.search(r'src="(/static/[a-f0-9]{16}/app.js)"', page.text)[1]
     script = client.get(path)
@@ -209,7 +210,8 @@ def test_removed_accents_keep_neutral_legacy_requests_working(client):
 
 
 def test_voice_disabled(settings):
-    with TestClient(create_app(settings)) as client:
+    config = settings.model_copy(update={"api_token": SecretStr("operator-test")})
+    with TestClient(create_app(config), headers={"Authorization": "Bearer operator-test"}) as client:
         assert client.get("/api/status").json()["voice_ready"] is False
         assert client.post("/api/speak", json={"text": "Hello"}).status_code == 503
         assert client.post("/api/speak/stream", json={"text": "Hello"}).status_code == 503

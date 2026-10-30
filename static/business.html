@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f4f6f1"><title>Business setup · Listen</title>
+  <link rel="stylesheet" href="/static/styles.css"><link rel="stylesheet" href="/static/business.css">
+  <script type="module" src="/static/business.js"></script>
+</head>
+<body>
+  <header class="header"><a class="brand" href="/">listen<span class="brand-period">.</span></a><span class="header-caption">Business setup</span><a class="header-link" href="/">Open playground ↗</a></header>
+  <main class="business-main">
+    <div class="business-intro"><div><span class="eyebrow">YOUR PHONE AGENT</span><h1>Make every call<br>feel personal.</h1></div><p>Set up a voice and knowledge base for each business, then connect its phone number.</p></div>
+    <div id="notice" class="business-notice" role="status" aria-live="polite" hidden></div>
+    <div class="business-layout">
+      <aside class="business-sidebar">
+        <div class="side-heading"><div><span class="eyebrow">WORKSPACES</span><h2>Your businesses</h2></div></div>
+        <label for="operator-token">Operator token</label><input id="operator-token" type="password" autocomplete="off" placeholder="Blank for local access">
+        <button type="button" id="load-businesses" class="secondary">Load businesses</button>
+        <div id="business-list" class="business-list"><p class="hint">Connect to see your businesses.</p></div>
+        <details class="workspace-access"><summary>Open with a business key</summary><label for="workspace-id">Business ID</label><input id="workspace-id" autocomplete="off"><label for="workspace-key">Business key</label><input id="workspace-key" type="password" autocomplete="off"><button type="button" id="open-workspace" class="secondary">Open workspace</button></details>
+        <details class="workspace-access" id="new-business"><summary>Add a business</summary>
+          <form id="create-form">
+            <label for="new-name">Business name</label><input id="new-name" maxlength="80" required placeholder="e.g. The Garden Cafe">
+            <label for="new-kind">Business type</label><select id="new-kind"><option value="restaurant">Restaurant</option><option value="clinic">Clinic</option><option value="support">Customer support</option></select>
+            <label for="new-phone">Exotel destination number</label><input id="new-phone" inputmode="tel" pattern="\+?[0-9]{8,15}" required placeholder="e.g. +918012345678"><p class="hint">Use the ExoPhone number that receives the forwarded call.</p>
+            <label for="new-greeting">Opening greeting</label><textarea id="new-greeting" rows="3" maxlength="300" required placeholder="Hello, thanks for calling. How can I help?"></textarea>
+            <button class="primary" type="submit">Create workspace</button>
+          </form>
+        </details>
+      </aside>
+      <section class="business-content" aria-label="Business workspace">
+        <div id="empty-workspace" class="empty-workspace"><span class="eyebrow">A LITTLE SETUP, A BETTER HELLO</span><h2>Your agent starts here.</h2><p>Add a business or open an existing workspace to set up its voice and answers.</p></div>
+        <div id="workspace" hidden>
+          <div class="workspace-heading"><div><span id="business-type" class="eyebrow"></span><h2 id="business-name"></h2><p id="business-phone" class="hint"></p></div><span id="voice-badge" class="badge">Voice not ready</span></div>
+          <details class="workspace-access"><summary>Business settings</summary><form id="settings-form"><div class="form-grid"><div><label for="edit-name">Business name</label><input id="edit-name" maxlength="80" required></div><div><label for="edit-kind">Business type</label><select id="edit-kind"><option value="restaurant">Restaurant</option><option value="clinic">Clinic</option><option value="support">Customer support</option></select></div><div><label for="edit-phone">Exotel destination number</label><input id="edit-phone" pattern="\+?[0-9]{8,15}" inputmode="tel" required></div></div><label for="edit-greeting">Opening greeting</label><textarea id="edit-greeting" maxlength="300" rows="2" required></textarea><div class="button-row"><button class="secondary" type="submit">Save settings</button></div></form></details>
+          <section id="credentials" class="credential-panel" hidden><h3>Save these keys now</h3><p>They are shown once. Keep them private. Use the stream key only in your Exotel Voicebot configuration.</p><label>Business ID <output id="created-id"></output></label><label>Business key <output id="created-access"></output></label><label>Stream key <output id="created-stream"></output></label><label>Voicebot WebSocket URL <output id="created-url"></output></label></section>
+          <section class="setup-section"><div class="section-heading"><div><span class="step">01 / YOUR SOUND</span><h3>Give your agent a voice.</h3><p>Record or upload 3–20 seconds of clear English speech from someone who has given permission.</p></div></div>
+            <form id="voice-form">
+              <div class="form-grid"><div><label for="voice-name">Voice name</label><input id="voice-name" maxlength="60" required placeholder="e.g. Our host"></div><div><label for="voice-file">Or upload a mono PCM WAV</label><input id="voice-file" type="file" accept="audio/wav,audio/x-wav,.wav"></div></div>
+              <div class="record-row"><button type="button" id="record-voice" class="secondary">Record voice</button><span id="record-status" class="hint" role="status">3–20 seconds</span></div><audio id="voice-preview" controls hidden></audio>
+              <label for="voice-text">Exact words spoken in the recording</label><textarea id="voice-text" maxlength="1000" rows="2" required></textarea>
+              <label class="consent"><input id="voice-consent" type="checkbox" required> I have permission from the voice owner to use this recording.</label>
+              <div class="button-row"><button type="submit" class="primary">Save custom voice</button><button type="button" id="prepare-voice" class="secondary">Prepare for calls</button><button type="button" id="delete-voice" class="text-button">Delete voice</button></div>
+              <div class="button-row"><button type="button" id="preview-clone" class="secondary">Preview custom voice</button><audio id="clone-preview" controls hidden aria-label="Custom voice preview"></audio></div>
+              <p class="hint">Calls use only this custom voice. The current local cloning engine supports English.</p>
+            </form>
+          </section>
+          <section class="setup-section"><div class="section-heading"><div><span class="step">02 / YOUR KNOWLEDGE</span><h3>Tell it what to say.</h3><p>Add accurate answers, including prices and conditions. The agent can only answer from this workspace.</p></div></div>
+            <form id="knowledge-form"><div id="knowledge-list"></div><button type="button" id="add-entry" class="secondary">+ Add an answer</button><button type="submit" class="primary">Save knowledge</button></form>
+            <form id="import-form"><label for="knowledge-file">Import a knowledge file</label><input id="knowledge-file" type="file" accept=".txt,text/plain" required><button type="submit" class="secondary">Import text</button><p class="hint">Use a UTF-8 text file up to 24 KB. Separate sections with blank lines; each section can be up to 1,200 characters. Importing a file replaces the previous file with the same name. Save any edits above first.</p></form>
+          </section>
+          <section class="setup-section"><div class="section-heading"><div><span class="step">03 / TRY IT</span><h3>Ask a question.</h3><p>Check the answer and its source before connecting real calls.</p></div></div><form id="test-form" class="test-form"><label class="sr-only" for="test-question">Question</label><input id="test-question" maxlength="1000" required placeholder="What would a caller ask?"><button class="secondary" type="submit">Ask agent</button></form><div id="test-answer" class="test-answer" role="status" hidden></div></section>
+          <section class="setup-section"><span class="step">04 / CONNECT YOUR PHONE</span><h3>Connect with Exotel.</h3><p>Configure the Voicebot applet with the secure URL shown when you created this workspace. Set its next applet to route to your team. Callers can press 0 to request a person.</p><p class="hint">Prepare the voice again after a server restart. Phone capacity depends on your server; the default limit is two simultaneous calls.</p><button id="rotate-keys" type="button" class="text-button">Replace lost keys</button></section>
+        </div>
+      </section>
+    </div>
+  </main><footer><span>Built to listen. Grounded in your documents.</span><span>English</span></footer>
+</body>
+</html>

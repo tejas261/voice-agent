@@ -82,8 +82,10 @@ def clone_settings(settings, tmp_path):
 def cloned_client(clone_settings):
     store = VoiceStore(clone_settings.voices_dir)
     worker = FakeWorker(clone_settings, store)
+    config = clone_settings.model_copy(update={"api_token": SecretStr("operator-test")})
     with TestClient(
-        create_app(clone_settings, speech=FakeStandard(), cloned_speech=worker)
+        create_app(config, speech=FakeStandard(), cloned_speech=worker),
+        headers={"Authorization": "Bearer operator-test"},
     ) as client:
         yield client, store, worker
 
@@ -189,8 +191,8 @@ def test_paths_and_unknown_profiles_are_rejected(cloned_client):
 
 
 def test_missing_clone_installation_keeps_standard_voice_working(clone_settings, tmp_path):
-    config = clone_settings.model_copy(update={"qwen_python": tmp_path / "missing"})
-    with TestClient(create_app(config, speech=FakeStandard())) as client:
+    config = clone_settings.model_copy(update={"qwen_python": tmp_path / "missing", "api_token": SecretStr("operator-test")})
+    with TestClient(create_app(config, speech=FakeStandard()), headers={"Authorization": "Bearer operator-test"}) as client:
         assert not client.get("/api/voices").json()["cloning"]["available"]
         assert upload(client).status_code == 503
         assert client.post("/api/speak", json={"text": "Hello"}).status_code == 200

@@ -2,7 +2,8 @@ import json
 
 import httpx
 import pytest
-from fastapi.testclient import TestClient
+from fastapi.testclient import TestClient as FastAPITestClient
+from pydantic import SecretStr
 
 from src.app import create_app
 from src.assistant import Assistant
@@ -17,9 +18,13 @@ NO_CLAIM_QUESTION = (
 )
 
 
+def TestClient(app):
+    return FastAPITestClient(app, headers={"Authorization": "Bearer operator-test"})
+
+
 @pytest.fixture
 def policy_settings(tmp_path):
-    return Settings(index_path=tmp_path / "policy.sqlite3", retrieval_mode="lexical")
+    return Settings(index_path=tmp_path / "policy.sqlite3", businesses_dir=tmp_path / "businesses", retrieval_mode="lexical", api_token=SecretStr("operator-test"))
 
 
 def test_default_knowledge_base_is_original_policy(policy_settings):

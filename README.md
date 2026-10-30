@@ -1,6 +1,6 @@
-# Listen — local voice support agent
+# Listen — voice support for businesses
 
-An English/Hindi customer-support assistant with microphone input, chat, source-backed answers, and spoken replies. It searches the policy knowledge base locally and can speak English replies in a saved cloned voice.
+Listen lets restaurants, clinics, and support teams create a workspace, add their own knowledge and custom voice, and connect an Exotel phone flow. Each business signs up separately and its workspace and calls use its own information and voice. The original English/Hindi insurance playground remains available to operators for testing.
 
 Retrieval and speech run locally. For natural answers to unfamiliar paraphrases, the recommended setup uses **Qwen 3.8 27B on Groq**, with low reasoning effort and a small, bounded source context. A no-key mode can copy matching clauses locally. The interface supports typed questions, push-to-talk, a voice-only toggle, playback interruption, and recording a voice-cloning reference.
 
@@ -15,7 +15,7 @@ uv pip install --python .venv-local/bin/python -r requirements/voice.lock
 ./run.sh
 ```
 
-Open **http://127.0.0.1:8000** and allow microphone access. Choose English or Hindi, click **Start speaking**, and click again to send. Recordings stop after 20 seconds. **Voice only** hides the chat and keeps spoken replies enabled.
+Open **http://127.0.0.1:8000**, create an account, and follow the workspace setup. Local accounts do not require email verification unless configured below. To use the original testing screen, set `API_TOKEN` to a strong secret, restart, and sign in at **http://127.0.0.1:8000/internal**; the playground is at `/testing`. Allow microphone access there. Recordings stop after 20 seconds.
 
 If the environment and models are already installed, just run `./run.sh`. Use `PORT=8001 ./run.sh` for another port. Keep one server worker so models are loaded only once. The browser interface is served by FastAPI; no separate frontend server or build is needed.
 
@@ -50,7 +50,7 @@ uv pip install --python .venv-qwen/bin/python -r requirements/qwen-mlx.lock
 ./run.sh
 ```
 
-In the interface, choose **Clone a voice**, enter a name, then record or upload 3–20 seconds of clear English speech. Check the transcript and use **Save & preview**. Select the saved voice under **Reply voice**.
+In a business workspace, choose **Your voice**, then record or upload 3–20 seconds of clear English speech, enter its exact transcript, confirm the voice owner's permission, and save it. Select **Prepare for calls** and preview it. The internal playground has a separate voice studio for testing.
 
 Speech uses the selected neural voice throughout the reply. The Indian/American/British macOS presets have been removed: they switched speakers and did not meet the conversational-quality goal. Saved clones keep the identity and accent from their recording. For new samples, speak naturally as if helping one customer; the reference's pacing, expression, and recording quality affect the clone.
 
@@ -103,7 +103,7 @@ The knowledge base contains product information, not customer account records. R
 
 ## Knowledge base
 
-The active policy files are:
+The original playground uses the following policy files:
 
 - [`data/policy_booklets.txt`](data/policy_booklets.txt): original English clauses in `LABEL: text` format, grouped by `SECTION:` headings.
 - [`data/policy_booklets.answers.json`](data/policy_booklets.answers.json): question examples, spoken English wording, Hindi translations, and links between clauses.
@@ -116,7 +116,7 @@ You can set `KB_PATH` to another structured TXT/Markdown file or a JSON list of 
 
 ### Add a policy
 
-The app loads **one knowledge-base file at a time**; it does not automatically combine or distinguish multiple policy files. To switch to another policy:
+The original playground loads **one knowledge-base file at a time**; it does not automatically combine or distinguish multiple policy files. To switch its policy:
 
 1. Transcribe the original policy into a UTF-8 file such as `data/new_policy.txt`. Put the product name and type before the first section, and each clause on one line with a unique uppercase label. Include the relevant conditions and source references. PDF files are not ingested directly. For example (fictional text):
 
@@ -162,6 +162,49 @@ The app loads **one knowledge-base file at a time**; it does not automatically c
 3. If a changed clause appears in an overview with `source_sha256_by_id`, review its spoken overview and update that clause's hash there too. When renaming or removing a clause, update every `context_ids`, `source_ids` and `source_sha256_by_id` reference to it.
 4. Restart the server and check representative answers and citations. The index refreshes on startup; there is no need to edit it by hand.
 
+### Convert a document for the knowledge base
+
+Install the optional converter dependencies, then convert a PDF, DOCX, TXT or Markdown document locally:
+
+```sh
+uv pip install --python .venv-local/bin/python -r requirements/documents.lock
+.venv-local/bin/python scripts/convert_document.py clinic-guide.pdf --output clinic-guide.txt
+```
+
+Upload the resulting `.txt` under **Knowledge → Import text** in a business workspace. Large outputs are split into numbered files of at most 24 KB. Review all extracted text, especially tables and conditions, before importing; the converter does not rewrite or summarize it. A workspace currently allows 40 entries in total, including existing entries, so a large document may need to be reduced or divided among workspaces. Re-importing the same filename replaces its earlier sections; if the output filenames change, remove obsolete sections manually.
+
+For the original policy playground, generate its `LABEL: text` format instead:
+
+```sh
+.venv-local/bin/python scripts/convert_document.py policy.docx --format policy --output data/new_policy.txt
+```
+
+Set `KB_PATH=data/new_policy.txt`, restart, and test the result. The converter reads selectable PDF text and DOCX paragraphs and tables. It does not perform OCR; scanned pages, text in images, and DOCX footnotes/endnotes need separate review. Headers and footers are appended with labels. Layout and reading order can differ from the original document.
+
+## Self-service business setup
+
+1. Sign up at `/signup`, then create a workspace with the business name and type. Sign back in at `/login`; setup progress is saved. Each account can create one workspace, and the account session only grants access to that workspace.
+2. Under **Knowledge**, add customer questions and answers or import a UTF-8 `.txt` file. Separate sections with blank lines; files are limited to 24 KB and each section to 1,200 characters. Importing the same filename replaces its earlier sections. Save edits and try representative questions under **Test answers**. PDF import is not supported.
+3. Under **Your voice**, record or upload a 3–20 second mono PCM WAV sample, enter the exact transcript, and confirm permission from the voice owner. Save it, select **Prepare for calls**, and preview it. Preparing must be repeated after a server restart. Calls are rejected until this custom voice is ready; Exotel does not supply the agent's voice. This local cloning engine requires Apple Silicon and currently supports **English only**.
+4. Under **Phone connection**, enter the ExoPhone destination number exactly as Exotel sends it in the stream's `start.to` field. Generate and save the connection URL; the key is shown only once. Generating a new key invalidates the old one for new calls. Adding the number alone does not verify the connection.
+5. Configure a public HTTPS/WSS reverse proxy with a valid TLS certificate. In Exotel, enable the **bidirectional Voicebot applet**, enter the generated URL (replace `YOUR_PUBLIC_HOST` if generated locally), and use 8 kHz mono PCM. Exotel sends its URL credentials as HTTP Basic authentication. Set the next applet to route to staff or voicemail; pressing 0 or requesting a person ends the stream so Exotel can continue there. Test the call flow before forwarding a real business line. See the [Exotel Voicebot protocol](https://support.exotel.com/support/solutions/articles/3000108630-working-with-the-stream-and-voicebot-applet).
+
+Set `VOICE_ENABLED=true` and a strong `API_TOKEN` for the phone integration. The internal playground and operator console (`/business`) are behind the operator sign-in at `/internal` and are not linked from the public site.
+
+### Public sign-up configuration
+
+For an HTTPS deployment, set `PUBLIC_ORIGIN` to the exact public origin (for example, `https://listen.example`), configure `SMTP_HOST`, `SMTP_PORT`, `SMTP_FROM` and, if required, `SMTP_USERNAME` and `SMTP_PASSWORD`. The relay must support STARTTLS. Public sign-up requires email verification, and password reset uses the same relay. Sign-up fails if verification cannot be delivered. Without these settings, localhost sign-up is intended for development and password recovery is unavailable; `REQUIRE_EMAIL_VERIFICATION=true` also enables verification locally when the relay and public origin are configured.
+
+### Google sign-in
+
+1. In [Google Auth Platform](https://console.cloud.google.com/auth/clients), configure the consent screen and create an OAuth **Web application** client. Add the exact redirect URI `http://127.0.0.1:8000/api/auth/google/callback` for local testing. For a public deployment, register `https://your-domain/api/auth/google/callback` and set `PUBLIC_ORIGIN=https://your-domain`. Add test users if the consent screen is in testing mode.
+2. Set `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, and `GOOGLE_REDIRECT_URI` in `.env`, using the matching registered URI, then restart. Open the app at the same host and port as the callback. The Google button appears on sign-in and sign-up when configured.
+3. A verified Gmail or Google Workspace address can sign in to an existing verified account with the same email. Other Google accounts can be connected after signing in with email and password using **Connect Google** in the workspace. New Google accounts create their own workspace through the usual onboarding. Google identities are stored by their stable account ID; Google access and ID tokens are not saved.
+
+See Google's [web-server OAuth setup](https://developers.google.com/identity/protocols/oauth2/web-server) for consent-screen publishing and redirect URI requirements. An actual Google client is needed to test the live sign-in; the application does not create one automatically. Configure any reverse proxy or external access logger to omit the callback query string, which contains a one-time authorization code.
+
+This is a **pilot**, not a production-ready multi-customer deployment. Phone ownership is not automatically verified, and local voice workers must be prepared on the serving process. The default limit is two simultaneous phone sessions; benchmark speech latency and capacity on your hardware. Use one server process for this pilot. Configure TLS, network access and backups appropriately before exposing it. Calls and transcripts are not persisted by this app; provider recording settings are separate. Local workspace knowledge and voice samples are stored under `BUSINESSES_DIR`; old knowledge snapshots remain there after updates. Hosted answer models receive the question and retrieved text. Review privacy and applicable healthcare requirements before using real clinic calls; the clinic guard is not a medical safety system. Booking, order placement, billing and automatic number provisioning are not implemented.
+
 ## Configuration
 
 | Setting | Purpose |
@@ -176,11 +219,17 @@ The app loads **one knowledge-base file at a time**; it does not automatically c
 | `CONTEXT_MAX_SOURCES`, `CONTEXT_MAX_CHARS` | Source-count and serialized-context limits; defaults `8`, `5000` |
 | `VOICE_ENABLED` | `./run.sh` enables speech by default; use `VOICE_ENABLED=false` to skip loading speech models |
 | `CPU_THREADS` | CPU inference threads; default `4` |
-| `API_TOKEN` | Optional bearer token; without it, access is limited to loopback and same-origin requests |
+| `API_TOKEN` | Operator secret required for the internal playground, operator API and Exotel phone streams |
+| `PUBLIC_ORIGIN` | Exact HTTPS origin for public deployments and account email links |
+| `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REDIRECT_URI` | Google OAuth web client credentials and exact callback URL |
+| `SMTP_HOST`, `SMTP_PORT`, `SMTP_FROM` | STARTTLS email relay and sender for verification and password reset |
+| `SMTP_USERNAME`, `SMTP_PASSWORD` | Optional SMTP relay credentials |
+| `REQUIRE_EMAIL_VERIFICATION` | Require verification even in local development; defaults to `false` |
+| `BUSINESSES_DIR`, `MAX_PHONE_CALLS` | Workspace storage and simultaneous phone sessions; defaults `runtime/businesses`, `2` |
 | `QWEN_PYTHON`, `QWEN_MODEL_DIR` | Isolated cloning interpreter and model directory |
 | `VOICES_DIR` | Persistent voice profiles; defaults to `runtime/voices` |
 
-Microphone capture requires localhost or HTTPS. For remote use, configure HTTPS and an API token. Customer question audio is processed in memory; saved cloning references are stored on disk. Answer/audio caches are bounded and in memory, and conversation history comes from the browser. The server does not log question bodies or save customer recordings.
+Microphone capture requires localhost or HTTPS. Customer question audio is processed in memory; saved cloning references are stored on disk. Answer/audio caches are bounded and in memory, and conversation history comes from the browser. The server does not log question bodies or save customer recordings.
 
 ## API
 
@@ -200,10 +249,11 @@ Microphone capture requires localhost or HTTPS. For remote use, configure HTTPS 
 ```sh
 curl http://127.0.0.1:8000/api/ask \
   -H 'Content-Type: application/json' \
+  -H "Authorization: Bearer $API_TOKEN" \
   -d '{"question":"What is the name of the policy?","language":"en"}'
 ```
 
-`/api/ask` also accepts up to six history messages. Audio uploads must be mono PCM16 WAV at 8–48 kHz, at most 3 MB, and within the configured duration limit. Add `Authorization: Bearer <token>` when `API_TOKEN` is configured. Errors use `{"error":{"code":"...","message":"..."}}`.
+These playground endpoints require the operator token. `/api/ask` also accepts up to six history messages. Audio uploads must be mono PCM16 WAV at 8–48 kHz, at most 3 MB, and within the configured duration limit. Errors use `{"error":{"code":"...","message":"..."}}`.
 
 For streaming speech, each `audio` event contains `sample_rate` and base64 `pcm` (mono, signed 16-bit little-endian samples). A `done` event confirms completion; an `error` event or EOF without `done` means the reply was incomplete. Cancelling the HTTP stream stops inference. Validation/authentication failures use normal HTTP errors before streaming begins. Audio buffers and response lengths are bounded; only completed cloned replies enter the replay cache.
 
@@ -255,7 +305,7 @@ src/                  API, retrieval, answers, speech, and voice storage
 static/               Browser UI and microphone worklets
 data/                 Active policy source and annotations
 requirements/         Dependency definitions and pinned installation files
-scripts/              Model installers, Qwen worker, and integration checks
+scripts/              Model installers, document converter, Qwen worker, and integration checks
 tests/                Unit/API tests and retrieval fixtures
 run.sh                Local server entry point
 .env.example          Configuration reference
@@ -263,7 +313,7 @@ models/               Downloaded runtime models (ignored)
 runtime/              Index, saved voices, and generated reports (ignored)
 ```
 
-Dependency profiles are `base` (API), `retrieval` (API + search), `voice` (API + search + speech), and `qwen-mlx` (isolated cloning worker). Install from the corresponding `.lock` file; `.txt` files describe dependencies for maintenance. `dev.txt` adds test/lint tools. Lock files retain the exact package versions; they are not duplicate environments.
+Dependency profiles are `base` (API), `retrieval` (API + search), `voice` (API + search + speech), `documents` (optional PDF/DOCX converter), and `qwen-mlx` (isolated cloning worker). Install from the corresponding `.lock` file; `.txt` files describe dependencies for maintenance. `dev.txt` adds test/lint tools. Lock files retain the exact package versions; they are not duplicate environments.
 
 Keep `.venv-local/`, `.venv-qwen/`, required models, `.env`, and `runtime/voices/` for the installed app. `runtime/knowledge.sqlite3` caches the derived search index and can rebuild if removed. Screenshots, evaluation reports, synthetic smoke-test audio, `__pycache__/`, `.pytest_cache/`, and `.ruff_cache/` can be regenerated. Local environments, models, state, and secrets are excluded by `.gitignore`.
 
