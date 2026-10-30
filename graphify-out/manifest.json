@@ -300,9 +300,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1793330457.8020194,
-    "seen": 1793330493.644434,
-    "ast_hash": "8b126a631218e411a0a5588d1a7bf038",
+    "mtime": 1793346591.0837114,
+    "seen": 1793346603.3860438,
+    "ast_hash": "145cb0b653696edb6baf67874819cdbb",
     "semantic_hash": ""
   },
   "data/policy_booklets.txt": {
@@ -531,6 +531,18 @@
     "mtime": 1793330161.704916,
     "seen": 1793330493.6446102,
     "ast_hash": "1a4391a1c5409855181eb59633f254c6",
+    "semantic_hash": ""
+  },
+  "setup.sh": {
+    "mtime": 1793346349.7906244,
+    "seen": 1793346603.384819,
+    "ast_hash": "9c6623a06535360cc4b3f0273c9e3b28",
+    "semantic_hash": ""
+  },
+  "tests/test_setup_script.py": {
+    "mtime": 1793346399.0727098,
+    "seen": 1793346603.385875,
+    "ast_hash": "866cbae2d616c4a4e107ff3577aec140",
     "semantic_hash": ""
   }
 }

@@ -6,18 +6,21 @@ Retrieval and speech run locally. For natural answers to unfamiliar paraphrases,
 
 ## Run locally
 
-Use **Python 3.12** and [uv](https://docs.astral.sh/uv/). From the project directory:
+On an **Apple Silicon Mac**, run the setup script from the project directory:
 
 ```sh
-uv venv --python 3.12 .venv-local
-uv pip install --python .venv-local/bin/python -r requirements/voice.lock
-.venv-local/bin/python scripts/setup_models.py
-./run.sh
+./setup.sh
 ```
+
+It installs uv and Python 3.12 if needed, creates the separate application and voice environments, installs the document converter, downloads the speech, retrieval and custom-voice models, and starts the app. The first run downloads several GB. Press Ctrl+C to stop; later, start it with `./run.sh`. Run `./setup.sh --no-start` to install without starting.
+
+You can also copy `setup.sh` to another laptop and run `sh setup.sh` from an empty directory. It clones the private GitHub repository into `voice-agent` first; Git and access to the repository are required. The script preserves an existing `.env` and runtime data, and reuses compatible environments while installing the pinned dependencies. For a new installation it creates a private `.env` with a random operator token. Keep that file to access `/internal`; Google, Groq, SMTP and Exotel require their own service configuration.
+
+The complete custom-voice setup requires Apple Silicon. On other hardware, the text-only installation below is available, but business phone calls cannot use the current custom voice engine. See the manual voice-cloning instructions below for individual installation steps.
 
 Open **http://127.0.0.1:8000**, create an account, and follow the workspace setup. Local accounts do not require email verification unless configured below. To use the original testing screen, set `API_TOKEN` to a strong secret, restart, and sign in at **http://127.0.0.1:8000/internal**; the playground is at `/testing`. Allow microphone access there. Recordings stop after 20 seconds.
 
-If the environment and models are already installed, just run `./run.sh`. Use `PORT=8001 ./run.sh` for another port. Keep one server worker so models are loaded only once. The browser interface is served by FastAPI; no separate frontend server or build is needed.
+Use `PORT=8001 ./run.sh` for another port. Keep one server worker so models are loaded only once. The browser interface is served by FastAPI; no separate frontend server or build is needed.
 
 Use [.env.example](.env.example) as a reference for your `.env`; keep existing keys and settings. Environment variables override `.env`. To enable the recommended answer model, set:
 
@@ -31,13 +34,15 @@ Restart after changing configuration. Without these settings, the default `extra
 
 Groq lists Qwen 3.8 27B at **$0.80 per million input tokens and $4.00 per million output tokens**. A turn using 2,200 input and 450 output tokens across query preparation and answering costs about **$0.00356**, or **$3.56 per 1,000 turns**, before any free quota or caching. Output usage includes reasoning tokens; usage varies with language, history and source recovery. Groq currently lists this model as a preview; check [its model page](https://console.groq.com/docs/model/qwen/qwen3.8-27b) for current pricing and availability. Questions, bounded conversation history, selected source passages, and a compact topic index are sent to Groq. Microphone recordings and cloned voice references stay local.
 
-For a minimal text-only installation, install `requirements/base.lock` instead of `requirements/voice.lock`, then run:
+For a minimal text-only installation, install [uv](https://docs.astral.sh/uv/) and run:
 
 ```sh
+uv venv --python 3.12 .venv-local
+uv pip install --python .venv-local/bin/python -r requirements/base.lock
 RETRIEVAL_MODE=lexical VOICE_ENABLED=false ./run.sh
 ```
 
-For text with semantic retrieval, install `requirements/retrieval.lock`, run `scripts/setup_retrieval.py`, and start with `VOICE_ENABLED=false ./run.sh`.
+For text with semantic retrieval, install `requirements/retrieval.lock` into `.venv-local`, run `.venv-local/bin/python scripts/setup_retrieval.py`, and start with `VOICE_ENABLED=false ./run.sh`.
 
 ## Voice cloning
 
